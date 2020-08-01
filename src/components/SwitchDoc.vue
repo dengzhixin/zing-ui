@@ -1,7 +1,7 @@
 <template>
     这是Switch的介绍
-    <Switch :value="v1" @input="v1 = $event"></Switch>
-    <Switch :value="v2" @input="v2 = $event"></Switch>
+    <Switch v-model:value="v1"></Switch>
+    <Switch v-model:value="v2" ></Switch>
 </template>
 <script lang="ts">
     import Switch from "../lib/Switch.vue";

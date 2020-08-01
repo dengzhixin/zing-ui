@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="官网框架基本搭建完成">
-      <change afterPath="$PROJECT_DIR$/src/lib/Switch.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonDoc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonDoc.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SwitchDoc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchDoc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1596042798071" duration="447000" />
       <workItem from="1596043272307" duration="791000" />
       <workItem from="1596297979949" duration="9564000" />
-      <workItem from="1596307852600" duration="2911000" />
+      <workItem from="1596307852600" duration="3853000" />
     </task>
     <task id="LOCAL-00001" summary="官网框架基本搭建完成">
       <created>1596308798321</created>

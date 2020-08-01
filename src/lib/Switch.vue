@@ -1,5 +1,8 @@
 <template>
-    <div class="switch" :class="{checked:value}" @click="changeStatus">
+    <div class="switch" :class="{checked:value,mouseDown:mouseDown}"
+         @click="changeStatus"
+         @mousedown="mousedown"
+        @mouseup="mouseup">
         <span class="dot"></span>
     </div>
 </template>
@@ -11,11 +14,18 @@
             value:Boolean
         },
         setup(props,context){
+            const mouseDown = ref(false)
             const changeStatus = ()=>{
-                context.emit('input',!props.value)
+                context.emit('update:value',!props.value)
             }
-
-            return {changeStatus}
+            const mousedown=()=>{
+                mouseDown.value=true
+                console.log('here')
+            }
+            const mouseup=()=>{
+                mouseDown.value=false
+            }
+            return {mouseDown,changeStatus,mousedown,mouseup}
         }
     }
 </script>
@@ -32,6 +42,7 @@
         border-radius: 20px;
         transition: all 250ms ease-in;
         display: inline-block;
+        cursor: pointer;
         &.checked{
             background-color: $color-primary;
             .dot{
