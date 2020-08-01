@@ -1,5 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  das
   <router-view></router-view>
 </template>
 
@@ -7,7 +8,7 @@
 export default {
   name: 'App',
   components: {
-    COM
+
   }
 }
 </script>

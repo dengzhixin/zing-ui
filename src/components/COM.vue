@@ -1,10 +1,14 @@
 <template>
-    com组件
+
+    <div>
+        这是com组件
+    </div>
+
 </template>
 
 <script>
     export default {
-        name: "COM.vue"
+        name: "COM"
     }
 </script>
 
