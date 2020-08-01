@@ -20,11 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/dengzhixin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/defaultTheme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ButtonDoc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SwitchDoc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Topnav.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/COM.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/COM.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/COM.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +55,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fMvdFaFAqqlWBACeDAJrlE8Qzp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,8 +66,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="SvnConfiguration">
@@ -69,7 +92,8 @@
       <workItem from="1596041303154" duration="1381000" />
       <workItem from="1596042798071" duration="447000" />
       <workItem from="1596043272307" duration="791000" />
-      <workItem from="1596297979949" duration="312000" />
+      <workItem from="1596297979949" duration="9564000" />
+      <workItem from="1596307852600" duration="819000" />
     </task>
     <servers />
   </component>
@@ -87,5 +111,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596307107507">
+      <screen x="44" y="23" width="1236" height="777" />
+    </state>
+    <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser/44.23.1236.777@44.23.1236.777" timestamp="1596307107507" />
+    <state x="389" y="220" key="#com.intellij.fileTypes.FileTypeChooser/47.23.1233.777@47.23.1233.777" timestamp="1596299427197" />
+    <state x="165" y="50" key="SettingsEditor" timestamp="1596308047439">
+      <screen x="46" y="23" width="1234" height="777" />
+    </state>
+    <state x="165" y="50" key="SettingsEditor/46.23.1234.777@46.23.1234.777" timestamp="1596308047439" />
+    <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596308048151">
+      <screen x="46" y="23" width="1234" height="777" />
+    </state>
+    <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.23.1234.777@46.23.1234.777" timestamp="1596308048151" />
   </component>
 </project>
