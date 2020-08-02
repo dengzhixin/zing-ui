@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="细节添加">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <workItem from="1596043272307" duration="791000" />
       <workItem from="1596297979949" duration="9564000" />
       <workItem from="1596307852600" duration="3853000" />
-      <workItem from="1596352455967" duration="351000" />
+      <workItem from="1596352455967" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="官网框架基本搭建完成">
       <created>1596308798321</created>
@@ -127,9 +127,17 @@
       <screen x="46" y="23" width="1234" height="777" />
     </state>
     <state x="165" y="50" key="SettingsEditor/46.23.1234.777@46.23.1234.777" timestamp="1596308047439" />
+    <state x="263" y="151" key="Vcs.Push.Dialog.v2" timestamp="1596353254918">
+      <screen x="49" y="23" width="1231" height="777" />
+    </state>
+    <state x="263" y="151" key="Vcs.Push.Dialog.v2/49.23.1231.777@49.23.1231.777" timestamp="1596353254918" />
     <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596308048151">
       <screen x="46" y="23" width="1234" height="777" />
     </state>
     <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/46.23.1234.777@46.23.1234.777" timestamp="1596308048151" />
+    <state x="328" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1596353232339">
+      <screen x="49" y="23" width="1231" height="777" />
+    </state>
+    <state x="328" y="124" width="670" height="676" key="search.everywhere.popup/49.23.1231.777@49.23.1231.777" timestamp="1596353232338" />
   </component>
 </project>
