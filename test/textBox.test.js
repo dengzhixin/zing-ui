@@ -64,9 +64,10 @@ describe('事件测试', () => {
         events.forEach((eventName) => {
             vm.$on(eventName, callback)
             let event = new Event(eventName)
-            let textbox = vm.$el.querySelector('input')
-            textbox.dispatchEvent(event)
-            expect(callback).to.calledWith(event)
+            Object.defineProperty(event,'target',{value:{value:'hi'},enumerable:true})
+            let textBox = vm.$el.querySelector('input')
+            textBox.dispatchEvent(event)
+            expect(callback).to.calledWith('hi')
         })
 
     })
