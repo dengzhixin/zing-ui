@@ -42,6 +42,7 @@
 
         aside {
             width: 260px;
+            z-index: 1;
             /*padding-left: 10px;*/
             /*padding-top: 10px;*/
             &.small{
@@ -54,7 +55,7 @@
             }
             li{
                 color: white;
-                padding: 10px;
+                padding:6px 30px;
                 &:hover,&:visited{
                     background-color: $color-primary;
                 }

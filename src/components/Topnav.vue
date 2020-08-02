@@ -2,7 +2,7 @@
     <section class="content">
         <div class="showMenuBtn" @click="toggleMenu">菜单</div>
         <router-link to="/">
-            <div class="logo" >Zing-UI</div>
+            <div class="logo" >Zing UI</div>
         </router-link>
         <ul class="menu">
             <router-link to="/">
@@ -13,7 +13,7 @@
                 <li>文档</li>
             </router-link>
             <router-link to="#">
-                <li>过多</li>
+                <li>更多</li>
             </router-link>
 
         </ul>
