@@ -1,7 +1,9 @@
 ## ZingUi
 这是一个基于Vue2 + TypeScript + Sass 的UI框架
+## 介绍
 
-## 安装
+## 开始使用
+1. 安装
 在使用前请将盒模型设置为`border-box`
 ```css
 *{
@@ -10,3 +12,5 @@
     box-sizing: border-box;
 }
 ```
+
+## 
