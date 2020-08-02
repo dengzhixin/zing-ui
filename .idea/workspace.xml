@@ -19,20 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="引入parcel打包">
-      <change afterPath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cache/f1/23bb707d29c90ea62575ec6d526d0c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Button.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="细节添加">
+      <change afterPath="$PROJECT_DIR$/src/Icon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f1/23bb707d29c90ea62575ec6d526d0c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f1/23bb707d29c90ea62575ec6d526d0c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -71,7 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.css" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="SvnConfiguration">
@@ -90,7 +89,7 @@
       <workItem from="1596043272307" duration="791000" />
       <workItem from="1596297979949" duration="9564000" />
       <workItem from="1596307852600" duration="3853000" />
-      <workItem from="1596352455967" duration="4475000" />
+      <workItem from="1596352455967" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="官网框架基本搭建完成">
       <created>1596308798321</created>
@@ -106,21 +105,7 @@
       <option name="project" value="LOCAL" />
       <updated>1596344651625</updated>
     </task>
-    <task id="LOCAL-00003" summary="更新readme">
-      <created>1596353513302</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1596353513303</updated>
-    </task>
-    <task id="LOCAL-00004" summary="引入parcel打包">
-      <created>1596354387047</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1596354387047</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,12 +124,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="官网框架基本搭建完成" />
     <MESSAGE value="细节添加" />
-    <MESSAGE value="更新readme" />
-    <MESSAGE value="引入parcel打包" />
-    <option name="LAST_COMMIT_MESSAGE" value="引入parcel打包" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节添加" />
   </component>
   <component name="WindowStateProjectService">
     <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596307107507">
@@ -152,16 +134,18 @@
     </state>
     <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser/44.23.1236.777@44.23.1236.777" timestamp="1596307107507" />
     <state x="389" y="220" key="#com.intellij.fileTypes.FileTypeChooser/47.23.1233.777@47.23.1233.777" timestamp="1596299427197" />
-    <state x="166" y="50" key="SettingsEditor" timestamp="1596357367667">
+    <state x="401" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596361228827">
       <screen x="47" y="23" width="1233" height="777" />
     </state>
+    <state x="401" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/47.23.1233.777@47.23.1233.777" timestamp="1596361228827" />
+    <state x="165" y="50" key="SettingsEditor" timestamp="1596308047439">
+      <screen x="46" y="23" width="1234" height="777" />
+    </state>
     <state x="165" y="50" key="SettingsEditor/46.23.1234.777@46.23.1234.777" timestamp="1596308047439" />
-    <state x="166" y="50" key="SettingsEditor/47.23.1233.777@47.23.1233.777" timestamp="1596357367667" />
-    <state x="168" y="50" key="SettingsEditor/49.23.1231.777@49.23.1231.777" timestamp="1596353555729" />
-    <state x="263" y="151" key="Vcs.Push.Dialog.v2" timestamp="1596354390513">
+    <state x="263" y="151" key="Vcs.Push.Dialog.v2" timestamp="1596353254918">
       <screen x="49" y="23" width="1231" height="777" />
     </state>
-    <state x="263" y="151" key="Vcs.Push.Dialog.v2/49.23.1231.777@49.23.1231.777" timestamp="1596354390513" />
+    <state x="263" y="151" key="Vcs.Push.Dialog.v2/49.23.1231.777@49.23.1231.777" timestamp="1596353254918" />
     <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596308048151">
       <screen x="46" y="23" width="1234" height="777" />
     </state>
