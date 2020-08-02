@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify --public-url ./ && karma start --single-run"
   },
   "dependencies": {
     "vue": "^2.6.11",
