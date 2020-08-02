@@ -25,6 +25,7 @@
     "karma-mocha": "^2.0.1",
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.1.0",
+    "parcel": "^1.12.4",
     "sass": "^1.26.10",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
