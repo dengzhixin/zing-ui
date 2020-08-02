@@ -8,6 +8,6 @@ before_script:
   - "sudo chown root /opt/google/chrome/chrome-sandbox"
   - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
 branches:
-only:
-  - vue2
+  only:
+    - vue2
 
