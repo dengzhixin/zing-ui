@@ -4,11 +4,13 @@
     <div class="textBox">
         <input type="text" :value="value" :disabled="disabled"
                :readonly="readonly" :placeholder="placeholder"
-                @change="$emit('change',$event)"
-               @input="$emit('input',$event)">
+               @change="$emit('change',$event.target.value)"
+               @input="$emit('input',$event.target.value)"
+               @focus="$emit('focus',$event.target.value)"
+               @blur="$emit('blur',$event.target.value)">
         <template v-if="error">
             <Icon class="icon" name="error"></Icon>
-<!--            <span class="errorMsg">{{error}}</span>-->
+            <!--            <span class="errorMsg">{{error}}</span>-->
         </template>
     </div>
 
@@ -24,14 +26,13 @@
         },
         props: {
             value: String,
-            disabled:Boolean,
-            readonly:Boolean,
+            disabled: Boolean,
+            readonly: Boolean,
             error: String,
             title: String,
-            placeholder:String
+            placeholder: String
         },
         mounted() {
-            console.log(Icon);
         }
     }
 
@@ -53,6 +54,7 @@
         align-items: center;
         flex-direction: row;
         margin: $spacing;
+
         input {
             vertical-align: middle;
             height: $height;
@@ -62,13 +64,16 @@
             border: 1px solid transparent;
             outline: none;
             transition: all 100ms;
-            &:disabled,&:read-only{
+
+            &:disabled, &:read-only {
                 cursor: no-drop;
+
                 &:hover, &:focus {
                     background-color: $color-bg;
                     border: 1px solid transparent;
                 }
             }
+
             &:hover, &:focus {
                 background-color: $color-bg-hover;
                 border: 1px solid $color-primary;

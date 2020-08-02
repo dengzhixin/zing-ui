@@ -42,7 +42,8 @@
         </z-button-group>
         <div class="textBox">
             <z-text-box value="abs"></z-text-box>
-            <z-text-box value="邓小邓" title="姓名" ></z-text-box>
+            <z-text-box v-model="message" title="姓名" ></z-text-box>
+            <p>123{{message}}</p>
             <z-text-box value="abs" error="错误"></z-text-box>
             <z-text-box value="abs"  readonly ></z-text-box>
             <z-text-box placeholder="请输入年龄" disabled></z-text-box>

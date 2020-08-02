@@ -8,7 +8,8 @@ Vue.component('z-text-box',TextBox)
 const vue = new Vue({
     el:'#app',
     data:{
-        loading:false
+        loading:false,
+        message:'sss'
     }
 })
 

@@ -10,7 +10,7 @@ Vue.config.devtools = false
 describe('TextBox传值测试', () => {
     const Constructor = Vue.extend(TextBox)
     let vm
-    afterEach(()=>{
+    afterEach(() => {
         vm && vm.$destroy()
     })
 
@@ -30,7 +30,7 @@ describe('TextBox传值测试', () => {
         vm = new Constructor({
             propsData: {
                 value: '123',
-                disabled:true
+                disabled: true
             }
         }).$mount()
         const input = vm.$el.querySelector('input')
@@ -41,7 +41,7 @@ describe('TextBox传值测试', () => {
         vm = new Constructor({
             propsData: {
                 value: '123',
-                readonly:true
+                readonly: true
             }
         }).$mount()
         const input = vm.$el.querySelector('input')
@@ -51,33 +51,24 @@ describe('TextBox传值测试', () => {
 
 })
 
-describe('事件测试',()=>{
+describe('事件测试', () => {
     const Constructor = Vue.extend(TextBox)
     let vm
-    afterEach(()=>{
+    afterEach(() => {
         vm && vm.$destroy()
     })
-
-    it('change测试',()=>{
+    it('change/input/focus/blur测试', () => {
         vm = new Constructor({}).$mount()
         const callback = sinon.fake()
-        vm.$on('change',callback)
-
-        let event = new Event('change')
-        let textbox = vm.$el.querySelector('input')
-        textbox.dispatchEvent(event)
-        expect(callback).to.have.been.called
-
-    })
-    it('input测试',()=>{
-        vm = new Constructor({}).$mount()
-        const callback = sinon.fake()
-        vm.$on('input',callback)
-
-        let event = new Event('input')
-        let textbox = vm.$el.querySelector('input')
-        textbox.dispatchEvent(event)
-        expect(callback).to.have.been.called
+        let events = ['change', 'input', 'focus', 'blur']
+        events.forEach((eventName) => {
+            vm.$on(eventName, callback)
+            let event = new Event(eventName)
+            let textbox = vm.$el.querySelector('input')
+            textbox.dispatchEvent(event)
+            expect(callback).to.calledWith(event)
+        })
 
     })
+
 })
