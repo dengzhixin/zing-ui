@@ -4,8 +4,8 @@
     <div class="textBox">
         <input type="text" :value="value" :disabled="disabled"
                :readonly="readonly" :placeholder="placeholder"
-                @change="$emit('change')"
-               @input="$emit('input')">
+                @change="$emit('change',$event)"
+               @input="$emit('input',$event)">
         <template v-if="error">
             <Icon class="icon" name="error"></Icon>
 <!--            <span class="errorMsg">{{error}}</span>-->
