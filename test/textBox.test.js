@@ -1,3 +1,5 @@
+import {describe} from "mocha";
+
 const expect = chai.expect;
 import Vue from 'vue'
 import TextBox from '../src/TextBox.vue'
@@ -5,24 +7,27 @@ import TextBox from '../src/TextBox.vue'
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
-describe('TextBox', () => {
+describe('TextBox传值测试', () => {
+    const Constructor = Vue.extend(TextBox)
+    let vm
+    afterEach(()=>{
+        vm && vm.$destroy()
+    })
+
     it('存在.', () => {
         expect(TextBox).to.be.ok
     })
     it('设置value.', () => {
-        const Constructor = Vue.extend(TextBox)
-        const vm = new Constructor({
+        vm = new Constructor({
             propsData: {
                 value: '123'
             }
         }).$mount()
         const input = vm.$el.querySelector('input')
         expect(input.value).to.equal('123')
-        vm.$destroy()
     })
     it('设置禁止状态', () => {
-        const Constructor = Vue.extend(TextBox)
-        const vm = new Constructor({
+        vm = new Constructor({
             propsData: {
                 value: '123',
                 disabled:true
@@ -31,11 +36,9 @@ describe('TextBox', () => {
         const input = vm.$el.querySelector('input')
         console.log(input.$el)
         expect(input.disabled).to.equal(true)
-        vm.$destroy()
     })
     it('设置只读状态', () => {
-        const Constructor = Vue.extend(TextBox)
-        const vm = new Constructor({
+        vm = new Constructor({
             propsData: {
                 value: '123',
                 readonly:true
@@ -44,8 +47,37 @@ describe('TextBox', () => {
         const input = vm.$el.querySelector('input')
         console.log(input.outerHTML);
         expect(input.readOnly).to.equal(true)
-        vm.$destroy()
     })
 
+})
 
+describe('事件测试',()=>{
+    const Constructor = Vue.extend(TextBox)
+    let vm
+    afterEach(()=>{
+        vm && vm.$destroy()
+    })
+
+    it('change测试',()=>{
+        vm = new Constructor({}).$mount()
+        const callback = sinon.fake()
+        vm.$on('change',callback)
+
+        let event = new Event('change')
+        let textbox = vm.$el.querySelector('input')
+        textbox.dispatchEvent(event)
+        expect(callback).to.have.been.called
+
+    })
+    it('input测试',()=>{
+        vm = new Constructor({}).$mount()
+        const callback = sinon.fake()
+        vm.$on('input',callback)
+
+        let event = new Event('input')
+        let textbox = vm.$el.querySelector('input')
+        textbox.dispatchEvent(event)
+        expect(callback).to.have.been.called
+
+    })
 })
