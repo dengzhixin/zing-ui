@@ -1,5 +1,5 @@
 ## ZingUi
-![https://travis-ci.org/github/dengzhixin/zing-ui](https://api.travis-ci.org/dengzhixin/zing-ui.svg?branch=vue2)
+![https://dengzhi.xin](https://api.travis-ci.org/dengzhixin/zing-ui.svg?branch=vue2)
 
 这是一个基于Vue2 + TypeScript + Sass 的UI框架
 
