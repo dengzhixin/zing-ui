@@ -12,36 +12,38 @@ const vue = new Vue({
 
 
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 const expect = chai.expect
 
 //单元测试
 {
-    const vm = Vue.extend(Button)
-    const button = new vm({
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
         propsData:{
             icon:'like'
         }
 
     })
-    button.$mount("#test")
+    vm.$mount("#test")
 
-    let useElement = button.$el.querySelector('use')
+    let useElement = vm.$el.querySelector('use')
     let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#i-like')
-    button.$el.remove()
-    button.$destroy()
+    vm.$el.remove()
+    vm.$destroy()
 }
 {
-    const vm = Vue.extend(Button)
-    const button = new vm({
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
         propsData:{
             icon:'like',
             loading:true
         }
 
     })
-    button.$mount()
-    let useElement = button.$el.querySelector('use')
+    vm.$mount()
+    let useElement = vm.$el.querySelector('use')
     let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#i-loading')
 
@@ -49,8 +51,8 @@ const expect = chai.expect
 
 {
     const div = document.createElement('div')
-    const vm = Vue.extend(Button)
-    const button = new vm({
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
         propsData:{
             icon:'like',
             iconPosition:'left'
@@ -58,20 +60,20 @@ const expect = chai.expect
 
     })
     document.body.appendChild(div)
-    button.$mount(div)
+    vm.$mount(div)
 
-    let svg = button.$el.querySelector('svg')
+    let svg = vm.$el.querySelector('svg')
     let {order} = window.getComputedStyle(svg)
     expect(order).to.eq('1')
-    button.$el.remove()
-    button.$destroy()
+    vm.$el.remove()
+    vm.$destroy()
 
 }
 
 {
     const div = document.createElement('div')
-    const vm = Vue.extend(Button)
-    const button = new vm({
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
         propsData:{
             icon:'like',
             iconPosition:'right'
@@ -79,12 +81,38 @@ const expect = chai.expect
 
     })
     document.body.appendChild(div)
-    button.$mount(div)
+    vm.$mount(div)
 
-    let svg = button.$el.querySelector('svg')
+    let svg = vm.$el.querySelector('svg')
     let {order} = window.getComputedStyle(svg)
     expect(order).to.eq('2')
-    button.$el.remove()
-    button.$destroy()
+    vm.$el.remove()
+    vm.$destroy()
+
+}
+
+
+{
+    const div = document.createElement('div')
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData:{
+            icon:'like',
+            iconPosition:'right'
+        }
+
+    })
+    document.body.appendChild(div)
+    vm.$mount(div)
+
+    let spy = chai.spy(function(){
+
+    })
+    vm.$on('click',spy)
+    vm.$el.click()
+    expect(spy).to.have.been.called()
+
+    vm.$el.remove()
+    vm.$destroy()
 
 }
