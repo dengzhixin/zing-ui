@@ -19,6 +19,7 @@
             --color-bg-hover: #172e40;
             --border-radius:4px;
         }
+
         #app{
             margin: 20px;
         }
@@ -39,9 +40,16 @@
             <z-button icon="right" icon-position="right">下一页</z-button>
             <z-button >过多</z-button>
         </z-button-group>
+        <div class="textBox">
+            <z-text-box value="abs"></z-text-box>
+            <z-text-box value="邓小邓" title="姓名" ></z-text-box>
+            <z-text-box value="abs" error="错误"></z-text-box>
+            <z-text-box value="abs"  readonly ></z-text-box>
+            <z-text-box placeholder="请输入年龄" disabled></z-text-box>
+        </div>
+
     </div>
     <div id="test"></div>
-    <script src="//at.alicdn.com/t/font_1981492_guloag1673v.js"></script>
     <script src="src/app.js"></script>
 </body>
 </html>

@@ -14,6 +14,7 @@
     import Icon from './Icon.vue'
 
     export default {
+        name:'ZingButton',
         components: {
             Icon
         },
@@ -47,7 +48,7 @@
     button {
         display: inline-flex;
         justify-content: center;
-        vertical-align: top;
+        vertical-align: middle;
         align-items: center;
         background-color: var(--color-bg);
         border: none;

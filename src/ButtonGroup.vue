@@ -5,6 +5,7 @@
 </template>
 <script lang="ts">
     export default {
+        name:'ZingButtonGroup',
         mounted() {
             for(let node of this.$el.children){
                 if (node.tagName.toLocaleLowerCase() !== 'button') {
@@ -18,6 +19,8 @@
     .buttonGroup{
         display: inline-flex;
         vertical-align: center;
+        vertical-align: middle;
+
         button{
             border-radius: 0;
             &:first-child{
