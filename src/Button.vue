@@ -56,7 +56,7 @@
         outline: none;
         transition: all 250ms;
         cursor: pointer;
-        line-height: 32px;
+        height: 32px;
         padding-left: 1em;
         padding-right: 1em;
         &.loading .icon {
