@@ -20,19 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="细节添加">
-      <change afterPath="$PROJECT_DIR$/src/Icon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/f1/23bb707d29c90ea62575ec6d526d0c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f1/23bb707d29c90ea62575ec6d526d0c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/63/390d1e451448e3e81aa38cd2b50038.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/63/390d1e451448e3e81aa38cd2b50038.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/da/8f3298828eb4d8b4ca9483588b57bb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/da/8f3298828eb4d8b4ca9483588b57bb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

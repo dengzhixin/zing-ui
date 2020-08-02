@@ -1,5 +1,5 @@
 <template>
-    <svg aria-hidden="true" v-if="name">
+    <svg class="icon" aria-hidden="true" v-if="name">
         <use :xlink:href="`#i-${name}`"></use>
     </svg>
 </template>
@@ -11,6 +11,12 @@
         }
     }
 </script>
-<style>
-
+<style scoped>
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
 </style>

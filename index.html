@@ -7,20 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
+
     </style>
 </head>
 <body>
     <div id="app">
         <z-button >您好</z-button>
         <z-button icon="settings" icon-position="left">您好</z-button>
-        <z-button icon="settings" icon-position="right">您好</z-button>
+        <z-button icon="settings" :loading="loading"@click="loading=!loading"  icon-position="right" >您好</z-button>
+        <z-button icon="settings" loading icon-position="right">设置</z-button>
 
     </div>
     <script src="//at.alicdn.com/t/font_1981492_3niswa147n.js"></script>
