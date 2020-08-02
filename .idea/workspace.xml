@@ -19,14 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="细节添加">
+    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="引入parcel打包">
+      <change afterPath="$PROJECT_DIR$/.cache/cb/f8939c9b3f4b5f0ea06f821e7ef572.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ButtonGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/09/5f4d86cfd2563d02bc201da3734a6f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/63/390d1e451448e3e81aa38cd2b50038.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/63/390d1e451448e3e81aa38cd2b50038.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/69/d62122edd539533167861581504d6d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/69/d62122edd539533167861581504d6d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/91/e9c0880eea6db37a4b85ebb9ea88e5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9a/92db73f794a9035b9e754aca908725.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9a/92db73f794a9035b9e754aca908725.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ac/adcf9a699b6bde59e383ed345a6e25.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ac/adcf9a699b6bde59e383ed345a6e25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b4/4d42164ea44b70888f94e809228bf8.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b4/4d42164ea44b70888f94e809228bf8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/cc/53bef385d2016c1c5b0346e73d05dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/cc/53bef385d2016c1c5b0346e73d05dd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/da/8f3298828eb4d8b4ca9483588b57bb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/da/8f3298828eb4d8b4ca9483588b57bb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f9/26beb40868e6a6d7d4510bae382325.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +95,7 @@
       <workItem from="1596297979949" duration="9564000" />
       <workItem from="1596307852600" duration="3853000" />
       <workItem from="1596352455967" duration="769000" />
+      <workItem from="1596371537517" duration="1093000" />
     </task>
     <task id="LOCAL-00001" summary="官网框架基本搭建完成">
       <created>1596308798321</created>
@@ -124,22 +135,24 @@
     <option name="LAST_COMMIT_MESSAGE" value="细节添加" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596307107507">
-      <screen x="44" y="23" width="1236" height="777" />
+    <state x="389" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596371392272">
+      <screen x="47" y="23" width="1233" height="777" />
     </state>
     <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser/44.23.1236.777@44.23.1236.777" timestamp="1596307107507" />
-    <state x="389" y="220" key="#com.intellij.fileTypes.FileTypeChooser/47.23.1233.777@47.23.1233.777" timestamp="1596299427197" />
+    <state x="389" y="220" key="#com.intellij.fileTypes.FileTypeChooser/47.23.1233.777@47.23.1233.777" timestamp="1596371392272" />
     <state x="401" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596361228827">
       <screen x="47" y="23" width="1233" height="777" />
     </state>
     <state x="401" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/47.23.1233.777@47.23.1233.777" timestamp="1596361228827" />
-    <state x="165" y="50" key="SettingsEditor" timestamp="1596308047439">
-      <screen x="46" y="23" width="1234" height="777" />
+    <state x="271" y="47" key="SettingsEditor" timestamp="1596371569658">
+      <screen x="47" y="23" width="1233" height="777" />
     </state>
     <state x="165" y="50" key="SettingsEditor/46.23.1234.777@46.23.1234.777" timestamp="1596308047439" />
-    <state x="263" y="151" key="Vcs.Push.Dialog.v2" timestamp="1596353254918">
-      <screen x="49" y="23" width="1231" height="777" />
+    <state x="271" y="47" key="SettingsEditor/47.23.1233.777@47.23.1233.777" timestamp="1596371569658" />
+    <state x="261" y="151" key="Vcs.Push.Dialog.v2" timestamp="1596372606392">
+      <screen x="47" y="23" width="1233" height="777" />
     </state>
+    <state x="261" y="151" key="Vcs.Push.Dialog.v2/47.23.1233.777@47.23.1233.777" timestamp="1596372606392" />
     <state x="263" y="151" key="Vcs.Push.Dialog.v2/49.23.1231.777@49.23.1231.777" timestamp="1596353254918" />
     <state x="147" y="123" width="1033" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596308048151">
       <screen x="46" y="23" width="1234" height="777" />

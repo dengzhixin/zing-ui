@@ -7,7 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --color-primary: #d45b38;
+            --color-text: #fff;
+            --color-bg: #2a4257;
+            --color-bg-hover: #172e40;
+            --border-radius:4px;
+        }
+        #app{
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -16,7 +30,10 @@
         <z-button icon="settings" icon-position="left">您好</z-button>
         <z-button icon="settings" :loading="loading"@click="loading=!loading"  icon-position="right" >您好</z-button>
         <z-button icon="settings" loading icon-position="right">设置</z-button>
-
+        <z-button-group>
+            <z-button icon="left" icon-position="left">上一页</z-button>
+            <z-button icon="right" icon-position="right">下一页</z-button>
+        </z-button-group>
     </div>
     <script src="//at.alicdn.com/t/font_1981492_3niswa147n.js"></script>
     <script src="src/app.js"></script>

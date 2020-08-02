@@ -34,10 +34,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    $color-primary: #d45b38;
-    $color-text: #fff;
-    $color-bg: #2a4257;
-    $color-bg-hover: #172e40;
+
     @keyframes loading {
         from {
             transform: rotate(0);
@@ -50,24 +47,25 @@
     button {
         display: inline-flex;
         justify-content: center;
-        vertical-align: middle;
+        vertical-align: top;
         align-items: center;
-        background-color: $color-bg;
-        padding: 10px 1em;
+        background-color: var(--color-bg);
         border: none;
-        color: $color-text;
-        border-radius: 4px;
+        color: var(--color-text);
+        border-radius: var(--border-radius);
         outline: none;
         transition: all 250ms;
         cursor: pointer;
-
+        line-height: 32px;
+        padding-left: 1em;
+        padding-right: 1em;
         &.loading .icon {
             animation: loading 1s infinite linear;
         }
 
         &:hover {
-            color: $color-primary;
-            background-color: $color-bg-hover;
+            color: var(--color-primary);
+            background-color: var(--color-bg-hover);
 
         }
 
