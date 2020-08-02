@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="官网框架基本搭建完成">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Topnav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Topnav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="6ad9218c-c403-4570-9967-1d880193c18f" name="Default Changelist" comment="细节添加" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596308798321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="细节添加">
+      <created>1596344651624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596344651625</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +110,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="官网框架基本搭建完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="官网框架基本搭建完成" />
+    <MESSAGE value="细节添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节添加" />
   </component>
   <component name="WindowStateProjectService">
     <state x="387" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596307107507">
