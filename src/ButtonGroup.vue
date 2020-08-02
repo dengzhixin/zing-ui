@@ -3,6 +3,17 @@
         <slot></slot>
     </div>
 </template>
+<script lang="ts">
+    export default {
+        mounted() {
+            for(let node of this.$el.children){
+                if (node.tagName.toLocaleLowerCase() !== 'button') {
+                    console.warn("ButtonGroup的子元素应该全部是Button")
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss" scoped>
     .buttonGroup{
         display: inline-flex;
