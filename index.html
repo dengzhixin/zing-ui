@@ -12,54 +12,62 @@
             padding: 0;
             box-sizing: border-box;
         }
-        :root{
+
+        :root {
             --color-primary: #d45b38;
             --color-text: #fff;
             --color-bg: #2a4257;
             --color-bg-hover: #172e40;
-            --border-radius:4px;
+            --border-radius: 4px;
         }
 
-        #app{
+        #app {
             margin: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="app">
+<div id="app">
+    <z-row>
+        <z-col :span="8" offset="2">
+            <div class="buttons">
+                <z-button>按钮</z-button>
+                <z-button icon="search" icon-position="left">搜索</z-button>
+                <z-button icon="settings" icon-position="left">设置</z-button>
+                <z-button type="dashed">虚线按钮</z-button>
+                <z-button type="text">文字按钮</z-button>
+                <z-button type="danger">危险按钮</z-button>
+                <z-button type="warning">警告按钮</z-button>
+                <z-button icon="download" :loading="loading" @click="loading=!loading" icon-position="right">下载
+                </z-button>
+                <z-button icon="settings" loading icon-position="right">loading</z-button>
+                <z-button-group>
+                    <z-button icon="left" icon-position="left">上一页</z-button>
+                    <z-button icon="right" icon-position="right">下一页</z-button>
+                </z-button-group>
+                <z-button-group>
+                    <z-button icon="left" icon-position="left">上一页</z-button>
+                    <z-button icon="right" icon-position="right">下一页</z-button>
+                    <z-button>全部</z-button>
+                </z-button-group>
+            </div>
 
-        <div class="buttons">
-            <z-button >按钮</z-button>
-            <z-button icon="search" icon-position="left">搜索</z-button>
-            <z-button icon="settings" icon-position="left">设置</z-button>
-            <z-button type="dashed">虚线按钮</z-button>
-            <z-button type="text">文字按钮</z-button>
-            <z-button type="danger">危险按钮</z-button>
-            <z-button type="warning">警告按钮</z-button>
-            <z-button icon="download" :loading="loading"@click="loading=!loading"  icon-position="right" >下载</z-button>
-            <z-button icon="settings" loading icon-position="right">loading</z-button>
-            <z-button-group>
-                <z-button icon="left" icon-position="left">上一页</z-button>
-                <z-button icon="right" icon-position="right">下一页</z-button>
-            </z-button-group>
-            <z-button-group>
-                <z-button icon="left" icon-position="left">上一页</z-button>
-                <z-button icon="right" icon-position="right">下一页</z-button>
-                <z-button >过多</z-button>
-                <z-button >过多</z-button>
-            </z-button-group>
-        </div>
-        <div class="textBox">
-            <z-text-box value="abs"></z-text-box>
-            <z-text-box v-model="message" title="姓名" placeholder="请输入姓名"></z-text-box>
-            <z-text-box value="xxx" error="这是错误提示"></z-text-box>
-            <z-text-box value="xxx" warning="这是警告提示"></z-text-box>
-            <z-text-box value="只读输入框"  readonly ></z-text-box>
-            <z-text-box value="禁用输入框" disabled></z-text-box>
-        </div>
+        </z-col>
+        <z-col :span="14">
+            <div class="textBox">
+                <z-text-box value="abs"></z-text-box>
+                <z-text-box v-model="message" title="姓名" placeholder="请输入姓名"></z-text-box>
+                <z-text-box value="xxx" error="这是错误提示"></z-text-box>
+                <z-text-box value="xxx" warning="这是警告提示"></z-text-box>
+                <z-text-box value="只读输入框" readonly></z-text-box>
+                <z-text-box value="禁用输入框" disabled></z-text-box>
+            </div>
+        </z-col>
+    </z-row>
 
-    </div>
-    <div id="test"></div>
-    <script src="src/app.js"></script>
+
+</div>
+<div id="test"></div>
+<script src="src/app.js"></script>
 </body>
 </html>
