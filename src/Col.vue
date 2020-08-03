@@ -8,7 +8,7 @@
 <script lang="ts">
     export default {
         props:{
-            span:{type:[String,Number],default:1},
+            span:{type:[String,Number]},
             offset:{type:[String,Number]}
         },
         data(){
@@ -18,7 +18,7 @@
         },
         computed:{
             colClass(){
-                return [`col-${this.span}`,this.offset && `offset-${this.offset}`]
+                return [this.span && `col-${this.span}`,this.offset && `offset-${this.offset}`]
             },
             colStyle(){
                 return {marginLeft:this.gutter/2+'px',marginRight:this.gutter/2+'px'}
@@ -26,7 +26,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .col{
         $span-pre:col-;
         $offset-pre:offset-;

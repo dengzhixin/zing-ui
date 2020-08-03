@@ -13,13 +13,6 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --color-primary: #d45b38;
-            --color-text: #fff;
-            --color-bg: #2a4257;
-            --color-bg-hover: #172e40;
-            --border-radius: 4px;
-        }
 
         #app {
             margin: 20px;
@@ -27,6 +20,14 @@
         .border{
             height: 100px;
             border:1px solid red;
+        }
+    </style>
+    <style>
+        .row{
+
+        }
+        .colDemo{
+            border: 1px solid red;
         }
     </style>
 </head>
@@ -68,9 +69,14 @@
             </div>
         </z-col>
     </z-row>
-    <z-row gutter="20">
-        <z-col span="10" ></z-col>
-        <z-col span="14"></z-col>
+
+    <z-row  gutter="20">
+        <z-col class="colDemo">123</z-col>
+        <z-col class="colDemo" span="14">132</z-col>
+    </z-row>
+    <z-row align="evenly" gutter="20">
+        <z-col class="colDemo">123</z-col>
+        <z-col class="colDemo" span="14">132</z-col>
     </z-row>
 
 
