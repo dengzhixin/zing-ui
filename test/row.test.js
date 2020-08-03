@@ -44,7 +44,7 @@ describe('Row', () => {
 
     })
 
-    it('row 接受 justify ', function () {
+    it('row 接收 justify ', function () {
         const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Row)
@@ -58,7 +58,7 @@ describe('Row', () => {
         div.remove()
         vm.$destroy()
     });
-    it('row 接受 justify ', function () {
+    it('row 接收 justify ', function () {
         const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Row)

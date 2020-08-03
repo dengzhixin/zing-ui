@@ -36,7 +36,7 @@
                 type: [Number, Object],
                 validator: deviceValidate
             },
-            widthPc: {
+            widePc: {
                 type: [Number, Object],
                 validator: deviceValidate
             },
@@ -57,7 +57,7 @@
                         arr.push(`col-${device}${obj.span}`)
                     }
                     if(obj.offset){
-                        arr.push(`offset-${device}${obj.span}`)
+                        arr.push(`offset-${device}${obj.offset}`)
                     }
                     return arr
 
