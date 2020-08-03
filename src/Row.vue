@@ -40,28 +40,22 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        &.justify-left {
-            justify-content: flex-start;
-        }
+        $justifyList: (left: flex-start, right: flex-end,
+                center: center,around:space-around,
+                between:space-between,evenly:space-evenly,
+        );
 
-        &.justify-right {
-            justify-content: flex-end;
+        @each $name, $value in $justifyList {
+            &.justify-#{$name} {
+                justify-content: $value ;
+            }
         }
-
-        &.justify-center {
-            justify-content: center;
-        }
-
-        &.justify-around {
-            justify-content: space-around;
-        }
-
-        &.justify-between {
-            justify-content: space-between;
-        }
-
-        &.justify-evenly {
-            justify-content: space-evenly;
+        $alignList: (top: flex-start, bottom: flex-end,
+                center: center);
+        @each $name, $value in $alignList {
+            &.align-#{$name} {
+                align-items: $value ;
+            }
         }
 
     }

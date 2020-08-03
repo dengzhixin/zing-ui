@@ -48,16 +48,28 @@
         },
         computed: {
             colClass() {
-                let {span, offset, justify, align, ipad, narrowPC, pc, widePc} = this
+                let {span, offset, justify, align, ipad, narrowPc, pc, widePc} = this
+                let x = (obj,device='')=>{
+                    let arr = []
+                    if(!obj){return arr
+                    }
+                    if(obj.span){
+                        arr.push(`col-${device}${obj.span}`)
+                    }
+                    if(obj.offset){
+                        arr.push(`offset-${device}${obj.span}`)
+                    }
+                    return arr
+
+                }
                 return [
-                    span && `col-${span}`,
-                    offset && `offset-${offset}`,
                     justify && `justify-${justify}`,
                     align && `align-${align}`,
-                    ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-                    ...(narrowPC ? [`col-narrow-pc-${narrowPC.span}`] : []),
-                    ...(pc ? [`col-pc-${pc.span}`] : []),
-                    ...(widePc ? [`col-wide-pc-${widePc.span}`] : []),
+                    ...x({span,offset}),
+                    ...x(ipad,'ipad-'),
+                    ...x(narrowPc,'narrowPc-'),
+                    ...x(pc,'pc-'),
+                    ...x(widePc,'widePc-')
 
                 ]
             },
@@ -82,6 +94,7 @@
                 margin-left: ($n / 24) * 100%;
             }
         }
+
         @media (min-width: 576px) {
             @for $n from 1 through 24 {
                 $span-pre: 'col-ipad-';
@@ -116,40 +129,22 @@
             }
         }
 
-        &.justify-left {
-            justify-content: flex-start;
+        $justifyList: (left: flex-start, right: flex-end,
+                center: center,around:space-around,
+                between:space-between,evenly:space-evenly,
+        );
+        @each $name, $value in $justifyList {
+            &.justify-#{$name} {
+                justify-content: $value ;
+            }
+        }
+        $alignList: (top: flex-start, bottom: flex-end,
+                center: center);
+        @each $name, $value in $alignList {
+            &.align-#{$name} {
+                align-items: $value ;
+            }
         }
 
-        &.justify-right {
-            justify-content: flex-end;
-        }
-
-        &.justify-center {
-            justify-content: center;
-        }
-
-        &.justify-around {
-            justify-content: space-around;
-        }
-
-        &.justify-between {
-            justify-content: space-between;
-        }
-
-        &.justify-evenly {
-            justify-content: space-evenly;
-        }
-
-        &.align-top {
-            align-items: flex-start;
-        }
-
-        &.align-center {
-            align-items: center;
-        }
-
-        &.align-bottom {
-            align-items: flex-end;
-        }
     }
 </style>
