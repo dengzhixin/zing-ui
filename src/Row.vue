@@ -39,8 +39,7 @@
     .row {
         display: flex;
         flex-direction: row;
-
-
+        flex-wrap: wrap;
         &.justify-left {
             justify-content: flex-start;
         }

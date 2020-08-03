@@ -1,7 +1,6 @@
 <template>
     <button
             @click="$emit('click')"
-
             :class="{
                 [`icon-${iconPosition}`]:true,
                 'loading':loading,
