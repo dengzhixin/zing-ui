@@ -80,6 +80,9 @@
         &:focus {
             animation: primary-shadow 250ms linear;
         }
+
+
+
         &.btn-default{
             background-color: $color-default;
             color: $color-black;
@@ -141,6 +144,7 @@
         &.loading .icon {
             animation: loading 1s infinite linear;
         }
+
 
 
 
