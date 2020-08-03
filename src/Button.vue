@@ -1,8 +1,11 @@
 <template>
     <button
             @click="$emit('click')"
-            :class="{[`icon-${iconPosition}`]:true,
-    'loading':loading}">
+
+            :class="{
+                [`icon-${iconPosition}`]:true,
+                'loading':loading,
+                [`btn-${type}`]:true}">
         <Icon class="icon" name="loading" v-if="loading"></Icon>
         <Icon class="icon" :name="icon" v-if="!loading && icon"></Icon>
         <div class="content">
@@ -14,11 +17,15 @@
     import Icon from './Icon.vue'
 
     export default {
-        name:'ZingButton',
+        name: 'ZingButton',
         components: {
             Icon
         },
         props: {
+            type:{
+                type:String,
+                default:'default'
+            },
             loading: {
                 type: Boolean,
                 default: false
@@ -35,6 +42,17 @@
     }
 </script>
 <style lang="scss" scoped>
+    $height: 36px;
+    $color-primary: #2593fc;
+    $color-default: #fff;
+    $color-danger: #fd4f54;
+    $color-warning:#f7b232;
+    $color-text: #fff;
+    $color-grey: #d9d9d9;
+    $color-black: #595959;
+    $color-error: #fc396b;
+    $border-radius: 4px;
+    $spacing: 4px;
 
     @keyframes loading {
         from {
@@ -50,24 +68,98 @@
         justify-content: center;
         vertical-align: middle;
         align-items: center;
-        background-color: var(--color-bg);
         border: none;
-        color: var(--color-text);
-        border-radius: var(--border-radius);
+        border-radius: $border-radius;
         outline: none;
         transition: all 250ms;
         cursor: pointer;
         height: 32px;
         padding-left: 1em;
         padding-right: 1em;
+        margin: $spacing;
+        &:focus {
+            animation: primary-shadow 400ms linear;
+        }
+        &.btn-default{
+            background-color: $color-default;
+            color: $color-black;
+            border: 1px solid $color-grey;
+            &:hover {
+                border: 1px solid $color-primary;
+            }
+
+        }
+        &.btn-primary{
+            background-color: $color-primary;
+            color: $color-primary;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: lighten($color-primary, 10%);
+            }
+        }
+        &.btn-dashed{
+            background-color: $color-default;
+            color: $color-black;
+            border: 1px dashed $color-grey;
+            &:hover {
+                border: 1px dashed $color-primary;
+            }
+        }
+        &.btn-text{
+            background-color: $color-text;
+            color: $color-black;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: lighten($color-grey, 12%);
+            }
+            &:focus{
+                animation: none;
+            }
+        }
+        &.btn-danger{
+            background-color: $color-danger;
+            color: $color-text;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: lighten($color-danger, 10%);
+            }
+            &:focus {
+                animation: danger-shadow 400ms linear;
+            }
+        }
+        &.btn-warning{
+            background-color: $color-warning;
+            color: $color-text;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: lighten($color-warning, 10%);
+            }
+            &:focus {
+                animation: warning-shadow 400ms linear;
+            }
+        }
         &.loading .icon {
             animation: loading 1s infinite linear;
         }
 
-        &:hover {
-            color: var(--color-primary);
-            background-color: var(--color-bg-hover);
 
+
+
+
+        @keyframes primary-shadow {
+            to {
+                box-shadow: lighten($color-primary, 40%) 0px 0px 0px 4px;
+            }
+        }
+        @keyframes danger-shadow {
+            to {
+                box-shadow: lighten($color-danger, 30%) 0px 0px 0px 4px;
+            }
+        }
+        @keyframes warning-shadow {
+            to {
+                box-shadow: lighten($color-warning, 30%) 0px 0px 0px 4px;
+            }
         }
 
         > .icon {

@@ -23,13 +23,26 @@
 
         button{
             border-radius: 0;
+            &:hover{
+                position: relative;
+                z-index: 1;
+            }
+            &:focus{
+                animation: none;
+
+            }
+            &:not(:first-child):not(:last-child){
+                margin: auto -1px;
+            }
             &:first-child{
                 border-bottom-left-radius: var(--border-radius);
                 border-top-left-radius: var(--border-radius);
+                margin-right: 0;
             }
             &:last-child{
                 border-bottom-right-radius: var(--border-radius);
                 border-top-right-radius: var(--border-radius);
+                margin-left: -1px;
             }
         }
     }

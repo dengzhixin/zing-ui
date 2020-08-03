@@ -27,26 +27,35 @@
 </head>
 <body>
     <div id="app">
-        <z-button >您好</z-button>
-        <z-button icon="settings" icon-position="left">您好</z-button>
-        <z-button icon="download" :loading="loading"@click="loading=!loading"  icon-position="right" >下载</z-button>
-        <z-button icon="settings" loading icon-position="right">loading</z-button>
-        <z-button-group>
-            <z-button icon="left" icon-position="left">上一页</z-button>
-            <z-button icon="right" icon-position="right">下一页</z-button>
-        </z-button-group>
-        <z-button-group>
-            <z-button icon="left" icon-position="left">上一页</z-button>
-            <z-button icon="right" icon-position="right">下一页</z-button>
-            <z-button >过多</z-button>
-        </z-button-group>
+
+        <div class="buttons">
+            <z-button >按钮</z-button>
+            <z-button icon="search" icon-position="left">搜索</z-button>
+            <z-button icon="settings" icon-position="left">设置</z-button>
+            <z-button type="dashed">虚线按钮</z-button>
+            <z-button type="text">文字按钮</z-button>
+            <z-button type="danger">危险按钮</z-button>
+            <z-button type="warning">警告按钮</z-button>
+            <z-button icon="download" :loading="loading"@click="loading=!loading"  icon-position="right" >下载</z-button>
+            <z-button icon="settings" loading icon-position="right">loading</z-button>
+            <z-button-group>
+                <z-button icon="left" icon-position="left">上一页</z-button>
+                <z-button icon="right" icon-position="right">下一页</z-button>
+            </z-button-group>
+            <z-button-group>
+                <z-button icon="left" icon-position="left">上一页</z-button>
+                <z-button icon="right" icon-position="right">下一页</z-button>
+                <z-button >过多</z-button>
+                <z-button >过多</z-button>
+            </z-button-group>
+        </div>
         <div class="textBox">
             <z-text-box value="abs"></z-text-box>
-            <z-text-box v-model="message" title="姓名" ></z-text-box>
-            <p>123{{message}}</p>
-            <z-text-box value="abs" error="错误"></z-text-box>
-            <z-text-box value="abs"  readonly ></z-text-box>
-            <z-text-box placeholder="请输入年龄" disabled></z-text-box>
+            <z-text-box v-model="message" title="姓名" placeholder="请输入姓名"></z-text-box>
+            <z-text-box value="xxx" error="这是错误提示"></z-text-box>
+            <z-text-box value="xxx" warning="这是警告提示"></z-text-box>
+            <z-text-box value="只读输入框"  readonly ></z-text-box>
+            <z-text-box value="禁用输入框" disabled></z-text-box>
         </div>
 
     </div>

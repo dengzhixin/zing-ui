@@ -1,16 +1,16 @@
 <template>
     <!--        <span class="title" v-if="title">{{title}}</span>-->
 
-    <div class="textBox">
+    <div class="textBox" :class="error?'danger':(warning?'warning':'')">
         <input type="text" :value="value" :disabled="disabled"
                :readonly="readonly" :placeholder="placeholder"
                @change="$emit('change',$event.target.value)"
                @input="$emit('input',$event.target.value)"
                @focus="$emit('focus',$event.target.value)"
                @blur="$emit('blur',$event.target.value)">
-        <template v-if="error">
+        <template v-if="error || warning">
             <Icon class="icon" name="error"></Icon>
-            <!--            <span class="errorMsg">{{error}}</span>-->
+            <span class="msg">{{error || warning}}</span>
         </template>
     </div>
 
@@ -29,8 +29,9 @@
             disabled: Boolean,
             readonly: Boolean,
             error: String,
+            warning: String,
             title: String,
-            placeholder: String
+            placeholder: String,
         },
         mounted() {
         }
@@ -38,14 +39,18 @@
 
 </script>
 <style lang="scss" scoped>
-    $height: 32px;
-    $color-primary: #1787fc;
+    $height: 36px;
+    $color-primary: #2593fc;
+    $color-default: #fff;
+    $color-danger: #fd4f54;
+    $color-warning: #f7b232;
     $color-text: #fff;
-    $color-bg: #d1dae0;
-    $color-bg-hover: #fff;
+    $color-grey: #d9d9d9;
+    $color-black: #595959;
     $color-error: #fc396b;
     $border-radius: 4px;
     $spacing: 4px;
+
 
     .textBox {
         display: inline-flex;
@@ -54,33 +59,43 @@
         align-items: center;
         flex-direction: row;
         margin: $spacing;
+        color: $color-black;
 
         input {
             vertical-align: middle;
             height: $height;
             padding: 1em;
             border-radius: $border-radius;
-            background-color: $color-bg;
+            background-color: $color-default;
             border: 1px solid transparent;
             outline: none;
             transition: all 100ms;
+            border: 1px solid $color-primary;
 
             &:disabled, &:read-only {
                 cursor: no-drop;
+                background-color: transparent;
+                border: 1px solid $color-grey;
+                color: $color-grey;
 
                 &:hover, &:focus {
-                    background-color: $color-bg;
-                    border: 1px solid transparent;
+                    border: 1px solid $color-grey;
                 }
             }
 
             &:hover, &:focus {
-                background-color: $color-bg-hover;
-                border: 1px solid $color-primary;
+                border: 1px solid lighten($color-primary, 10%);
             }
 
             &:focus {
-                box-shadow: inset lighten($color-primary,40%) -1px -1px 10px;
+                animation: shawdow 250ms linear alternate;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        @keyframes shawdow {
+            to {
+                box-shadow: lighten($color-primary, 40%) 0px 0px 0px 2px;
             }
         }
 
@@ -90,8 +105,18 @@
             cursor: pointer;
         }
 
-        .errorMsg {
-
+        &.danger {
+            .icon,
+            .msg {
+                color: $color-danger;
+            }
         }
+
+        &.warning {
+            .icon,.msg {
+                color: $color-warning;
+            }
+        }
+
     }
 </style>
