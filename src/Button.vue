@@ -70,14 +70,17 @@
         border: none;
         border-radius: $border-radius;
         outline: none;
-        transition: all 250ms;
+        transition: all 500ms;
         cursor: pointer;
         height: 32px;
         padding-left: 1em;
         padding-right: 1em;
         margin: $spacing;
+
         &:focus {
             animation: primary-shadow 250ms linear;
+            animation-fill-mode: forwards;
+
         }
 
 
@@ -118,40 +121,32 @@
                 animation: none;
             }
         }
-        &.btn-danger{
-            background-color: $color-danger;
-            color: $color-text;
-            border: 1px solid transparent;
-            &:hover {
-                background-color: lighten($color-danger, 10%);
-            }
-            &:focus {
-                animation: danger-shadow 250ms linear;
-            }
-        }
-        &.btn-warning{
-            background-color: $color-warning;
-            color: $color-text;
-            border: 1px solid transparent;
-            &:hover {
-                background-color: lighten($color-warning, 10%);
-            }
-            &:focus {
-                animation: warning-shadow 250ms linear;
+
+        $btnColors:(danger:$color-danger,warning:$color-warning);
+        @each $name,$btnColor in $btnColors{
+            &.btn-#{$name}{
+                background-color: $btnColor;
+                color: $color-text;
+                border: 1px solid transparent;
+                &:hover {
+                    background-color: lighten( $btnColor, 10%);
+                }
+                &:focus {
+                    animation: #{$name}-shadow 250ms linear;
+                    animation-fill-mode: forwards;
+                }
             }
         }
+
         &.loading .icon {
             animation: loading 1s infinite linear;
         }
 
 
 
-
-
-
         @keyframes primary-shadow {
             to {
-                box-shadow: lighten($color-primary, 40%) 0px 0px 0px 2px;
+                box-shadow: lighten($color-primary, 36%) 0px 0px 0px 2px;
             }
         }
         @keyframes danger-shadow {

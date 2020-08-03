@@ -12,7 +12,8 @@
                 type: [String, Number],
                 default: 0
             },
-            justify: String
+            justify: String,
+            align:String
         },
         mounted() {
             this.$children.forEach((vm) => {
