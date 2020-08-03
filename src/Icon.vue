@@ -33,15 +33,5 @@
 
     }
 
-    .box:hover .title {
-        background-color: red;
-        display: block;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        z-index: 1;
-        width: 100px;
-        height: 100px;
-    }
 
 </style>
