@@ -24,12 +24,16 @@
         #app {
             margin: 20px;
         }
+        .border{
+            height: 100px;
+            border:1px solid red;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <z-row>
-        <z-col :span="8" offset="2">
+    <z-row gutter="20">
+        <z-col :span="10">
             <div class="buttons">
                 <z-button>按钮</z-button>
                 <z-button icon="search" icon-position="left">搜索</z-button>
@@ -53,7 +57,7 @@
             </div>
 
         </z-col>
-        <z-col :span="14">
+        <z-col :span="14" >
             <div class="textBox">
                 <z-text-box value="abs"></z-text-box>
                 <z-text-box v-model="message" title="姓名" placeholder="请输入姓名"></z-text-box>
@@ -63,6 +67,10 @@
                 <z-text-box value="禁用输入框" disabled></z-text-box>
             </div>
         </z-col>
+    </z-row>
+    <z-row gutter="20">
+        <z-col span="10" ></z-col>
+        <z-col span="14"></z-col>
     </z-row>
 
 

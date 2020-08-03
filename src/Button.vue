@@ -78,7 +78,7 @@
         padding-right: 1em;
         margin: $spacing;
         &:focus {
-            animation: primary-shadow 400ms linear;
+            animation: primary-shadow 250ms linear;
         }
         &.btn-default{
             background-color: $color-default;
@@ -124,7 +124,7 @@
                 background-color: lighten($color-danger, 10%);
             }
             &:focus {
-                animation: danger-shadow 400ms linear;
+                animation: danger-shadow 250ms linear;
             }
         }
         &.btn-warning{
@@ -135,7 +135,7 @@
                 background-color: lighten($color-warning, 10%);
             }
             &:focus {
-                animation: warning-shadow 400ms linear;
+                animation: warning-shadow 250ms linear;
             }
         }
         &.loading .icon {
@@ -148,17 +148,17 @@
 
         @keyframes primary-shadow {
             to {
-                box-shadow: lighten($color-primary, 40%) 0px 0px 0px 4px;
+                box-shadow: lighten($color-primary, 40%) 0px 0px 0px 2px;
             }
         }
         @keyframes danger-shadow {
             to {
-                box-shadow: lighten($color-danger, 30%) 0px 0px 0px 4px;
+                box-shadow: lighten($color-danger, 30%) 0px 0px 0px 2px;
             }
         }
         @keyframes warning-shadow {
             to {
-                box-shadow: lighten($color-warning, 30%) 0px 0px 0px 4px;
+                box-shadow: lighten($color-warning, 30%) 0px 0px 0px 2px;
             }
         }
 
