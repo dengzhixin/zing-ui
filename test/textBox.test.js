@@ -34,7 +34,6 @@ describe('TextBox传值测试', () => {
             }
         }).$mount()
         const input = vm.$el.querySelector('input')
-        console.log(input.$el)
         expect(input.disabled).to.equal(true)
     })
     it('设置只读状态', () => {
@@ -45,7 +44,6 @@ describe('TextBox传值测试', () => {
             }
         }).$mount()
         const input = vm.$el.querySelector('input')
-        console.log(input.outerHTML);
         expect(input.readOnly).to.equal(true)
     })
 
