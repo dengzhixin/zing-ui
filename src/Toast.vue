@@ -7,6 +7,7 @@
                 <slot v-else></slot>
             </div>
             <div class="closeButton" @click="clickCloseButton">
+
                 <zing-icon class="icon" v-if="closeButton.type==='icon'" name="circleClose"></zing-icon>
                 <div class="text" v-else ref="text">
                     <div class="line" ref="line"></div>
@@ -49,7 +50,7 @@
             },
             closeButton: {
                 type: Object,
-                default: () => {
+                default () {
                     return {
                         type: 'icon',
                         text: undefined,
@@ -81,16 +82,18 @@
         },
         methods: {
             initLineHeight() {
-                this.$nextTick(() => {
-                    let height = (this.$refs.toast.getBoundingClientRect().height - 10) + 'px';
-                    this.$refs.line.style.height = height
-                })
+                // this.$nextTick(() => {
+                //     let height = (this.$refs.toast.getBoundingClientRect().height - 10) + 'px';
+                //     this.$refs.line.style.height = height
+                // })
             },
             close(callback = undefined) {
-                this.show = false
                 callback && callback()
+                this.show = false
+
             },
             afterLeave() {
+                this.$emit('close')
                 this.$el.remove()
                 this.$destroy()
             },
@@ -157,7 +160,10 @@
         .closeButton {
             cursor: pointer;
             flex-shrink: 0;
-
+            .icon{
+                margin-left: 4px;
+                color: white;
+            }
             .text {
                 display: flex;
                 align-items: center;
