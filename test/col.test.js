@@ -39,7 +39,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const el = vm.$el
-        console.log(el.outerHTML);
         expect(el.classList.contains('offset-1')).eq(true)
         div.remove()
         vm.$destroy()
@@ -86,7 +85,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const el = vm.$el
-        console.log(el.outerHTML);
         expect(el.classList.contains('offset-ipad-2') && el.classList.contains('col-ipad-12') ).eq(true)
         div.remove()
         vm.$destroy()
@@ -105,7 +103,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const el = vm.$el
-        console.log(el.outerHTML);
         expect(el.classList.contains('offset-narrowPc-2') && el.classList.contains('col-narrowPc-12') ).eq(true)
         div.remove()
         vm.$destroy()
@@ -123,7 +120,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const el = vm.$el
-        console.log(el.outerHTML);
         expect(el.classList.contains('offset-pc-2') && el.classList.contains('col-pc-12') ).eq(true)
         div.remove()
         vm.$destroy()
@@ -141,7 +137,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const el = vm.$el
-        console.log(el.outerHTML);
         expect(el.classList.contains('offset-widePc-2') && el.classList.contains('col-widePc-12') ).eq(true)
         div.remove()
         vm.$destroy()

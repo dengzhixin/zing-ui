@@ -14,7 +14,6 @@
             }
         },
         mounted() {
-            // console.log(this.$el.children);
             this.$children.forEach((vm) => {
 
                 if (vm.$options.name === 'ZingSider') {

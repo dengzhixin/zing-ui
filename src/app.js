@@ -32,7 +32,11 @@ const vue = new Vue({
         showToast(){
             this.$toast(
                 `${Math.random()*100}`,
-                {closeButton:{callback:()=>{
+                {
+                    parentNode:'#toastParent',
+                    closeButton:{
+                        text:'关闭',
+                        callback:()=>{
                     console.log("关闭回调")
                     }}})
         }

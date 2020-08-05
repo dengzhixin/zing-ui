@@ -74,19 +74,19 @@
             this.autoClose && setTimeout(() => {
                 this.close()
             }, this.closeDelay)
+            this.show = true
             if (this.closeButton.text) {
                 this.closeButton.type = 'text'
+                this.initLineHeight()
             }
-            this.show = true
-            this.initLineHeight()
 
         },
         methods: {
             initLineHeight() {
-                // this.$nextTick(() => {
-                //     let height = (this.$refs.toast.getBoundingClientRect().height - 10) + 'px';
-                //     this.$refs.line.style.height = height
-                // })
+                this.$nextTick(() => {
+                    let height = (this.$refs.toast.getBoundingClientRect().height - 10) + 'px';
+                    this.$refs.line.style.height = height
+                })
             },
             close(callback = undefined) {
                 callback && callback()
