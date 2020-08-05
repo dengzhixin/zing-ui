@@ -31,9 +31,10 @@ const vue = new Vue({
     methods:{
         showToast(){
             this.$toast({
-                message:'哈哈哈',
+                message:'<a href="qq.com">asasd</a>',
                 type:'success',
-                position:'center',
+                enableHtml:true,
+                position:'middle',
                 closeButton:{text:'知道了',callback:()=>{
                     console.log("关闭了")
                     }}

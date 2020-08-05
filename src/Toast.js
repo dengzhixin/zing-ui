@@ -13,7 +13,7 @@ export default {
             const toast = new Constructor
             toast.$slots.default = [options.message]
 
-            const props = ['type', 'position', 'closeButton', 'position']
+            const props = ['type', 'position', 'closeButton', 'position','enableHtml']
             props.forEach((key) => {
                 toast.$props[key] = options[key]
             })

@@ -3,7 +3,8 @@
         <div class="toast" v-show="show" :class="toastClass" ref="toast">
 
             <div class="content">
-                <slot></slot>
+                <div v-if="enableHtml" v-html="$slots.default[0]"></div>
+                <slot v-else></slot>
             </div>
             <div class="closeButton" @click="clickCloseButton">
                 <zing-icon class="icon" v-if="closeButton.type==='icon'" name="circleClose"></zing-icon>
@@ -15,7 +16,7 @@
     </transition>
 
 </template>
-<script lang="ts">
+<script lang="ts" scoped>
     import ZingIcon from "./Icon.vue";
 
     export default {
@@ -32,7 +33,11 @@
             },
             position: {
                 type: String,
-                default: 'top'
+                default: 'middle',
+                validator:(value)=>{
+                    return ['top','middle','bottom'].indexOf(value)>-1
+                }
+
             },
             autoClose: {
                 type: Boolean,
@@ -51,6 +56,10 @@
                         callback: undefined
                     }
                 }
+            },
+            enableHtml:{
+                type:Boolean,
+                default:false
             }
         },
         computed: {
@@ -134,7 +143,7 @@
             top: auto;
             bottom: 0;
         }
-        &.center{
+        &.middle{
             top:50%;
             transform: translate(-50%,-50%);
         }
