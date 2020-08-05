@@ -30,15 +30,11 @@ const vue = new Vue({
     },
     methods:{
         showToast(){
-            this.$toast({
-                message:'<a href="qq.com">asasd</a>',
-                type:'success',
-                enableHtml:true,
-                position:'middle',
-                closeButton:{text:'知道了',callback:()=>{
-                    console.log("关闭了")
-                    }}
-            })
+            this.$toast(
+                `${Math.random()*100}`,
+                {closeButton:{callback:()=>{
+                    console.log("关闭回调")
+                    }}})
         }
     }
 })

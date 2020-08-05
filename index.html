@@ -45,17 +45,7 @@
 </head>
 <body>
 <div id="app">
-    <div style="min-height: 100vh;">
-        <z-layout class="box">
-            <z-header class="layoutDemo">头</z-header>
-            <z-layout>
-                <z-sider>边栏</z-sider>
-                <z-content class="layoutDemo">内容</z-content>
-            </z-layout>
 
-            <z-footer class="layoutDemo">尾</z-footer>
-        </z-layout>
-    </div>
     <z-row gutter="20">
         <z-col :span="10">
             <div class="buttons">
@@ -106,7 +96,17 @@
         </z-col>
         <z-col class="colDemo" span="24" :ipad="{span:12}">132</z-col>
     </z-row>
+    <div style="min-height: 100vh;">
+        <z-layout class="box">
+            <z-header class="layoutDemo">头</z-header>
+            <z-layout>
+                <z-sider>边栏</z-sider>
+                <z-content class="layoutDemo">内容</z-content>
+            </z-layout>
 
+            <z-footer class="layoutDemo">尾</z-footer>
+        </z-layout>
+    </div>
 
 </div>
 <div id="test"></div>
