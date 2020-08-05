@@ -1,6 +1,6 @@
 <template>
     <transition name="fade" @after-leave="afterLeave">
-        <div class="toast" v-show="show" :class="toastClass" ref="toast">
+        <div class="toast" v-show="show" :class="toastClasses" ref="toast">
 
             <div class="content">
                 <div v-if="enableHtml" v-html="$slots.default[0]"></div>
@@ -61,12 +61,13 @@
             enableHtml:{
                 type:Boolean,
                 default:false
-            }
+            },
+            parentNode:[String,Object]
         },
         computed: {
-            toastClass() {
-                let {type, position} = this
-                return [type, position]
+            toastClasses() {
+                let {type, position,parentNode} = this
+                return [type, position,parentNode?'hasParent':'']
             }
         },
         mounted() {
@@ -149,6 +150,9 @@
         &.middle{
             top:50%;
             transform: translate(-50%,-50%);
+        }
+        &.hasParent{
+            position: absolute;
         }
 
         .content {
