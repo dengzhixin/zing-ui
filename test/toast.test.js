@@ -49,8 +49,10 @@ describe('Toast', () => {
             }
         }).$mount(div)
         expect(vm.$el.classList.contains('hasParent')).eq(true)
+        div.remove()
+        vm.$destroy()
     })
-    it('接收closeButton', () => {
+    it('接收closeButton', (done) => {
         const Constructor = Vue.extend(Toast)
         const div = document.createElement('div')
         const callback = sinon.fake()
@@ -64,9 +66,15 @@ describe('Toast', () => {
         }).$mount(div)
         const closeButton = vm.$el.querySelector('.closeButton')
         expect(closeButton.innerText.trim()).eq('关闭')
-        closeButton.click()
+        setTimeout(()=>{
+            closeButton.click()
+            expect(callback).called
+            div.remove()
+            vm.$destroy()
+            done()
+        },200)
 
-        expect(callback).called
+
     })
     it('接收enableHtml', () => {
         const Constructor = Vue.extend(Toast)
@@ -81,7 +89,22 @@ describe('Toast', () => {
         vm.$mount(div)
         const aaa = vm.$el.querySelector('#aaa')
         expect(aaa).exist
+        div.remove()
+        vm.$destroy()
     })
-
+    it('接收position', () => {
+        const Constructor = Vue.extend(Toast)
+        const div = document.createElement('div')
+        const callback = sinon.fake()
+        const vm = new Constructor({
+            propsData: {
+                position:'middle'
+            }
+        })
+        vm.$mount(div)
+        expect(vm.$el.classList.contains('middle')).eq(true)
+        div.remove()
+        vm.$destroy()
+    })
 
 })
