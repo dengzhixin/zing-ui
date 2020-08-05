@@ -17,28 +17,51 @@
         #app {
             margin: 20px;
         }
-        .border{
+
+        .border {
             height: 100px;
-            border:1px solid red;
+            border: 1px solid red;
         }
     </style>
     <style>
-        .row{
+        .row {
 
         }
-        .colDemo{
+
+        .colDemo {
             border: 1px solid red;
             height: 100px;
+        }
+
+        .box {
+            height: 100vh;
+        }
+
+        .layoutDemo {
+            height: 100px;
+            border: 1px solid red;
         }
     </style>
 </head>
 <body>
 <div id="app">
+    <div style="min-height: 100vh;">
+        <z-layout class="box">
+            <z-header class="layoutDemo">头</z-header>
+            <z-layout>
+                <z-sider>边栏</z-sider>
+                <z-content class="layoutDemo">内容</z-content>
+            </z-layout>
+
+            <z-footer class="layoutDemo">尾</z-footer>
+        </z-layout>
+    </div>
     <z-row gutter="20">
         <z-col :span="10">
             <div class="buttons">
                 <z-button>按钮</z-button>
                 <z-button icon="search" icon-position="left">搜索</z-button>
+                <z-button  @click="showToast">showToast</z-button>
                 <z-button icon="settings" icon-position="left">设置</z-button>
                 <z-button type="dashed">虚线按钮</z-button>
                 <z-button type="text">文字按钮</z-button>
@@ -59,7 +82,7 @@
             </div>
 
         </z-col>
-        <z-col :span="14" >
+        <z-col :span="14">
             <div class="textBox">
                 <z-text-box value="abs"></z-text-box>
                 <z-text-box v-model="message" title="姓名" placeholder="请输入姓名"></z-text-box>
@@ -71,12 +94,12 @@
         </z-col>
     </z-row>
 
-    <z-row  gutter="20">
+    <z-row gutter="20">
         <z-col offset="2" class="colDemo">123</z-col>
         <z-col class="colDemo" span="14">132</z-col>
     </z-row>
     <z-row justify="left" gutter="20" align="bottom">
-        <z-col  style="height: 200px" span="24" :ipad="{span:12}" class="colDemo" justify="center" align="center">
+        <z-col style="height: 200px" span="24" :ipad="{span:12}" class="colDemo" justify="center" align="center">
             <div style="width: 10px; height: 10px;background-color:red;">
                 asd
             </div>

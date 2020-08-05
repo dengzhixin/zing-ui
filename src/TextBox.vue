@@ -1,6 +1,4 @@
 <template>
-    <!--        <span class="title" v-if="title">{{title}}</span>-->
-
     <div class="textBox" :class="error?'danger':(warning?'warning':'')">
         <input type="text" :value="value" :disabled="disabled"
                :readonly="readonly" :placeholder="placeholder"
