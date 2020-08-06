@@ -1,46 +1,53 @@
 <template>
     <div class="popover" ref="popover">
-        <div ref="content" class="popoverContent" :class="position" v-show="show">
+        <div ref="contentWrapper" class="popoverContent" :class="position" v-show="show">
             <slot name="content"></slot>
         </div>
-        <div ref="triggerWrapper" class="triggerWrapper" @click="onClick">
+        <div ref="triggerWrapper" class="triggerWrapper">
             <slot></slot>
         </div>
     </div>
 </template>
 <script>
     export default {
+        name:'ZingPopover',
         data() {
             return {
-                show: false
+                show: false,
+                hideTimeId:undefined,
             }
         },
         props: {
             position: {
                 type: String,
                 default: 'right'
+            },
+            trigger:{
+                type:String,
+                default:'click'
             }
         },
         methods: {
             documentEventHandle(e) {
-                if (!this.$refs.content.contains(e.target) && !this.$refs.triggerWrapper.contains(e.target)) {
+                //点击的是外面的
+                if (!this.$refs.contentWrapper.contains(e.target) && !this.$refs.triggerWrapper.contains(e.target)) {
                     this.show = false
                     document.removeEventListener('click', this.documentEventHandle)
                 }
             },
             initPosition() {
 
-                let {triggerWrapper, content} = this.$refs
-                document.body.appendChild(content)
+                const {triggerWrapper, contentWrapper} = this.$refs
+                document.body.appendChild(contentWrapper)
                 this.$nextTick(() => {
                     let {left, top, width, height} = triggerWrapper.getBoundingClientRect()
-                    let rectContent = content.getBoundingClientRect()
+                    let rectContent = contentWrapper.getBoundingClientRect()
                     let width2 = rectContent.width
                     let height2 = rectContent.height
                     left += window.scrollX
                     top += window.scrollY
 
-                    let hash ={
+                    let hashPosition ={
                         left:{
                             left: left - width2,
                             top:top
@@ -58,25 +65,51 @@
                             top: top + height
                         }
                     }
-
-                    content.style.left = hash[this.position].left +'px'
-                    content.style.top = hash[this.position].top +'px'
+                    contentWrapper.style.left = hashPosition[this.position].left +'px'
+                    contentWrapper.style.top = hashPosition[this.position].top +'px'
 
                 })
 
 
             },
-            onShow() {
-                this.initPosition()
-                document.addEventListener('click', this.documentEventHandle)
-            },
-            onClick(e) {
+            onClick(){
                 this.show = !this.show
-                this.onShow(e)
+                this.initPosition()
+                if(this.trigger==='click'){
+                    document.addEventListener('click', this.documentEventHandle)
+                }
+            },
+            onShow() {
+                this.clearHideTimeout()
+                this.show =true
+                this.initPosition()
+                if(this.trigger==='click'){
+                    document.addEventListener('click', this.documentEventHandle)
+                }
+            },
+            onHide(){
+                this.hideTimeId = setTimeout(()=>{
+                    this.show = false
+                },200)
+            },
+            clearHideTimeout(){
+                if(this.hideTimeId){
+                    clearTimeout(this.hideTimeId)
+                }
             }
+
         },
         mounted() {
-            document.addEventListener('click', this.documentEventHandle)
+            console.log(this.trigger)
+            if(this.trigger==='click'){
+                this.$refs.triggerWrapper.addEventListener('click',this.onClick)
+            }else{
+                this.$refs.triggerWrapper.addEventListener('mouseenter',this.onShow)
+                this.$refs.triggerWrapper.addEventListener('mouseleave',this.onHide)
+                this.$refs.contentWrapper.addEventListener('mouseenter',this.clearHideTimeout)
+                this.$refs.contentWrapper.addEventListener('mouseleave',this.onHide)
+            }
+
         }
     }
 </script>
@@ -92,6 +125,7 @@
         border: 1px solid $color-grey;
         border-radius: $border-radius;
         padding: 0.5em 1em;
+        max-width: 20em;
         transition: all 0.3s linear;
         word-break: break-all;
         filter: drop-shadow(0px 1px 1px $color-grey);
@@ -108,6 +142,8 @@
             &::before, &::after {
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
+                border-bottom: none
+
             }
         }
 
@@ -117,14 +153,13 @@
                 top: 100%;
                 left: 1em;
                 border-top: 6px solid $color-grey;
-                border-bottom: 6px solid transparent;
+            ;
             }
 
             &::after {
                 top: calc(100% - 1px);
                 left: 1em;
                 border-top: 6px solid white;
-                border-bottom: 6px solid transparent;
             }
         }
 
@@ -132,6 +167,8 @@
             &::before, &::after {
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
+                border-top:none;
+
             }
         }
 
@@ -141,14 +178,12 @@
                 bottom: 100%;
                 left: 1em;
                 border-bottom: 6px solid $color-grey;
-                border-top: 6px solid transparent;
             }
 
             &::after {
                 bottom: calc(100% - 1px);
                 left: 1em;
                 border-bottom: 6px solid white;
-                border-top: 6px solid transparent;
             }
         }
 
@@ -156,6 +191,8 @@
             &::before, &::after {
                 border-bottom: 6px solid transparent;
                 border-top: 6px solid transparent;
+                border-right:none;
+
             }
         }
 
@@ -165,22 +202,20 @@
                 left: 100%;
                 top: 0.5em;
                 border-left: 6px solid $color-grey;
-                border-right: 6px solid transparent;
             }
 
             &::after {
-                /*bottom: calc(100% - 1px);*/
                 left:calc(100% - 1px) ;
                 top: 0.5em;
-
                 border-left: 6px solid white;
-                border-right: 6px solid transparent;
             }
         }
         &.right {
             &::before, &::after {
                 border-bottom: 6px solid transparent;
                 border-top: 6px solid transparent;
+                border-left:none;
+
             }
         }
 
@@ -190,16 +225,12 @@
                 right: 100%;
                 top: 0.5em;
                 border-right: 6px solid $color-grey;
-                border-left: 6px solid transparent;
             }
 
             &::after {
-                /*bottom: calc(100% - 1px);*/
                 right:calc(100% - 1px) ;
                 top: 0.5em;
-
                 border-right: 6px solid white;
-                border-left: 6px solid transparent;
             }
         }
 
