@@ -1,7 +1,7 @@
 <template>
     <div class="popover" ref="popover">
         <div ref="contentWrapper" class="popoverContent" :class="position" v-show="show">
-            <slot name="content"></slot>
+            <slot name="content" :close="onHide"></slot>
         </div>
         <div ref="triggerWrapper" class="triggerWrapper">
             <slot></slot>
@@ -88,6 +88,7 @@
                 }
             },
             onHide(){
+                console.log('hide');
                 this.hideTimeId = setTimeout(()=>{
                     this.show = false
                 },200)
@@ -100,7 +101,6 @@
 
         },
         mounted() {
-            console.log(this.trigger)
             if(this.trigger==='click'){
                 this.$refs.triggerWrapper.addEventListener('click',this.onClick)
             }else{
