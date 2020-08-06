@@ -22,6 +22,9 @@
             return {'eventBus':this.eventBus}
         },
         mounted() {
+            if(this.$children.length===0){
+                console && console.warn && console.warn('tabs的子组件不应该为空')
+            }
             this.eventBus.$emit('update:selected',this.selected)
         }
     }
