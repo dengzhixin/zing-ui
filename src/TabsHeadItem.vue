@@ -1,5 +1,5 @@
 <template>
-    <div class="item" @click="selectItem" :class="classes">
+    <div class="item" @click="selectItem" :class="classes" :data-name="name">
         <slot></slot>
     </div>
 </template>
@@ -18,7 +18,7 @@
             }
         },
         mounted() {
-            this.eventBus.$on('update:selected', (name) => {
+            this.eventBus && this.eventBus.$on('update:selected', (name) => {
                 this.active = this.name === name;
             })
         },
