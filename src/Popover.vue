@@ -33,31 +33,35 @@
                 let {triggerWrapper, content} = this.$refs
                 document.body.appendChild(content)
                 this.$nextTick(() => {
-                    let {left, x, top, width, height} = triggerWrapper.getBoundingClientRect()
+                    let {left, top, width, height} = triggerWrapper.getBoundingClientRect()
                     let rectContent = content.getBoundingClientRect()
                     let width2 = rectContent.width
                     let height2 = rectContent.height
                     left += window.scrollX
                     top += window.scrollY
-                    switch (this.position) {
-                        case 'left':
-                            content.style.left = left - width2 + 'px'
-                            content.style.top = top + 'px'
-                            break;
-                        case 'right':
-                            content.style.left = left + width + 'px'
-                            content.style.top = top + 'px'
-                            break;
-                        case 'top':
-                            content.style.left = left + 'px'
-                            content.style.top = top - height2 + 'px'
-                            break;
-                        case 'bottom':
-                            content.style.left = left + 'px'
-                            content.style.top = top + height + 'px'
-                            break;
 
+                    let hash ={
+                        left:{
+                            left: left - width2,
+                            top:top
+                        },
+                        right:{
+                            left:  left + width ,
+                            top:top
+                        },
+                        top:{
+                            left: left,
+                            top: top - height2
+                        },
+                        bottom:{
+                            left: left,
+                            top: top + height
+                        }
                     }
+
+                    content.style.left = hash[this.position].left +'px'
+                    content.style.top = hash[this.position].top +'px'
+
                 })
 
 
