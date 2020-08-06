@@ -21,6 +21,7 @@
     import ZingIcon from "./Icon.vue";
 
     export default {
+        name:'ZingToast',
         components: {ZingIcon},
         data() {
             return {
