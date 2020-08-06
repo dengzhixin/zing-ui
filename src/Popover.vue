@@ -80,6 +80,7 @@
                 }
             },
             onShow() {
+                console.log('here');
                 this.clearHideTimeout()
                 this.show =true
                 this.initPosition()
@@ -110,6 +111,18 @@
                 this.$refs.contentWrapper.addEventListener('mouseleave',this.onHide)
             }
 
+        },
+        destroyed() {
+            const {triggerWrapper,contentWrapper} = this.$refs
+            if(this.trigger==='click'){
+                triggerWrapper && triggerWrapper.removeEventListener('click', this.onClick);
+                document.removeEventListener('click', this.documentEventHandle)
+            }else{
+                triggerWrapper && triggerWrapper.removeEventListener('mouseenter',this.onShow)
+                triggerWrapper && triggerWrapper.removeEventListener('mouseleave',this.onHide)
+                contentWrapper && contentWrapper.removeEventListener('mouseenter',this.clearHideTimeout)
+                contentWrapper && contentWrapper.removeEventListener('mouseleave',this.onHide)
+            }
         }
     }
 </script>
