@@ -35,14 +35,11 @@
 
         button{
             border-radius: 0;
-            &:hover{
+            &:hover,&:focus{
                 position: relative;
                 z-index: 1;
             }
-            &:focus{
-                /*animation: none;*/
 
-            }
             &:not(:first-child):not(:last-child){
                 margin: auto -1px;
             }
