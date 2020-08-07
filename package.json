@@ -6,10 +6,12 @@
   "author": "deng <786339231@qq.com>",
   "license": "MIT",
   "scripts": {
-    "build":"parcel build index.js --no-cache --no-minify --public-url ./",
+    "build": "parcel build index.js --no-cache --no-minify --public-url ./",
     "dev": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify --public-url ./ && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify --public-url ./ && karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "vue": "^2.6.11",
@@ -26,12 +28,15 @@
     "karma-mocha": "^2.0.1",
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.1.0",
+    "node-sass": "^4.14.1",
     "parcel": "^1.12.4",
     "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
     "typescript": "^3.9.7",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.3"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

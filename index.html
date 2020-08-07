@@ -15,7 +15,6 @@
 
 
         #app {
-            margin: 20px;
         }
 
         .border {
@@ -41,12 +40,108 @@
             height: 100px;
             border: 1px solid red;
         }
+        .popoverBox{
+            width: 800px;
+            padding: 50px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <div id="toastParent" style="width: 200px;height: 400px;border: 1px solid red;position: fixed;right: 0">
-        toastParent
+    <div class="collapse">
+        <z-collapse :selected.sync="collapseSelected" single>
+            <z-collapse-item title="一致性 Consistency" name="item1">
+                与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+                在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
+            </z-collapse-item>
+            <z-collapse-item title="一致性 Consistency" name="item2">
+                与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+                在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
+            </z-collapse-item>
+        </z-collapse>
+    </div>
+    <div class="popoverBox">
+        <z-popover >
+            <div class="content" slot="content" slot-scope="{close}">
+                <z-button @click="close">关闭</z-button>
+                这个是popover这个是popover这个是popover这个是popover这个是popover这个是popover
+            </div>
+            <z-button>默认</z-button>
+        </z-popover>
+        <z-popover  position="left">
+            <div slot="content">
+                123312132
+            </div>
+            <z-button>left</z-button>
+
+        </z-popover>
+        <z-popover position="right">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button >right</z-button>
+        </z-popover>
+        <z-popover  position="top">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button >top</z-button>
+        </z-popover>
+        <z-popover position="bottom">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button>bottom</z-button>
+        </z-popover>
+
+        <z-popover trigger="hover">
+            <div class="content" slot="content">
+                这个是popover这个是popover这个是popover这个是popover这个是popover这个是popover
+            </div>
+            <z-button>默认</z-button>
+        </z-popover>
+        <z-popover trigger="hover"  position="left">
+            <div slot="content">
+                123312132
+            </div>
+            <z-button>left</z-button>
+
+        </z-popover>
+        <z-popover trigger="hover" position="right">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button >right</z-button>
+        </z-popover>
+        <z-popover trigger="hover" position="top">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button >top</z-button>
+        </z-popover>
+        <z-popover trigger="hover"  position="bottom">
+            <div class="content" slot="content">
+                pop
+            </div>
+            <z-button>bottom</z-button>
+        </z-popover>
+    </div>
+    <div class="tabs">
+        <z-tabs selected="item1">
+            <z-tabs-head>
+                <z-tabs-item name="item1"><z-icon name="settings"></z-icon> 选项卡1</z-tabs-item>
+                <z-tabs-item name="item2" disabled>选项卡12</z-tabs-item>
+                <z-tabs-item name="item3">选项卡3</z-tabs-item>
+                <z-tabs-item name="item4" >选项卡4</z-tabs-item>
+                <z-button slot="actions">设置</z-button>
+            </z-tabs-head>
+            <z-tabs-body>
+                <z-tabs-pane name="item1">哈哈哈1</z-tabs-pane>
+                <z-tabs-pane name="item2">哈哈哈2222</z-tabs-pane>
+                <z-tabs-pane name="item3">123</z-tabs-pane>
+                <z-tabs-pane name="item4">cdc</z-tabs-pane>
+            </z-tabs-body>
+        </z-tabs>
     </div>
     <z-row gutter="20">
         <z-col :span="10">

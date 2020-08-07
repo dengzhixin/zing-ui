@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/zing-ui/',
     title: 'Zing-UI',
     description: '一个好看的Vue2UI库',
     themeConfig: {
