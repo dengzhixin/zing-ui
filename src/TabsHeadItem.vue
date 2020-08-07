@@ -41,7 +41,8 @@
     }
 </script>
 <style lang="scss" scoped>
-    @import "style.scss";
+    $color-primary: #2593fc;
+    $color-grey: #d9d9d9;
 
     .item {
         margin-right: 2em;

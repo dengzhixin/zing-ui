@@ -56,7 +56,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    @import "style.scss";
+    $color-grey: #d9d9d9;
 
     .collapseItem {
         margin: 1em;

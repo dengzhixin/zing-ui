@@ -30,7 +30,6 @@
     }
 </script>
 <style lang="scss" scoped>
-    @import "style.scss";
 .tabs{
 
 }

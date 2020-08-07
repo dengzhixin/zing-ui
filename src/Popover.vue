@@ -125,7 +125,8 @@
     }
 </script>
 <style lang="scss" scoped>
-    @import "style.scss";
+    $color-grey: #d9d9d9;
+    $border-radius: 4px;
 
     .popover {
         display: inline-flex;
