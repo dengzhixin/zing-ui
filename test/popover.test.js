@@ -18,7 +18,6 @@ describe('Popover', () => {
                 position: 'left'
             }
         }).$mount()
-        console.log();
         expect(vm.$el.querySelector('.popoverContent').classList.contains('left')).eq(true)
         vm.$destroy()
     })
