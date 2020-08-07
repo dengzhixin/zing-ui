@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
     export default {
-
+        name:'ZingContent'
     }
 </script>
 <style scoped>

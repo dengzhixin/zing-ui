@@ -80,7 +80,6 @@
                 }
             },
             onShow() {
-                console.log('here');
                 this.clearHideTimeout()
                 this.show =true
                 this.initPosition()
@@ -89,7 +88,6 @@
                 }
             },
             onHide(){
-                console.log('hide');
                 this.hideTimeId = setTimeout(()=>{
                     this.show = false
                 },200)
