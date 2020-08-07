@@ -61,7 +61,6 @@
 
         input {
             vertical-align: middle;
-            height: $height;
             padding: 1em;
             border-radius: $border-radius;
             background-color: $color-default;
