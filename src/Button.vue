@@ -1,10 +1,7 @@
 <template>
     <button
             @click="$emit('click')"
-            :class="{
-                [`icon-${iconPosition}`]:true,
-                'loading':loading,
-                [`btn-${type}`]:true}">
+            :class="classes">
         <Icon class="icon" name="loading" v-if="loading"></Icon>
         <Icon class="icon" :name="icon" v-if="!loading && icon"></Icon>
         <div class="content">
@@ -36,6 +33,20 @@
                 validate(value) {
                     return !(value !== 'left' && value !== 'right');
                 }
+            },
+            disabled:{
+                type:Boolean,
+                default:false
+            },
+        },
+
+        computed:{
+            classes(){
+                return {
+                    [`icon-${this.iconPosition}`]:true,
+                    'loading':this.loading,
+                    [`btn-${this.type}`]:true,
+                    'disabled':this.disabled}
             }
         }
     }
@@ -46,6 +57,9 @@
     $color-default: #fff;
     $color-danger: #fd4f54;
     $color-warning:#f7b232;
+    $color-success: #28bd6e;
+    $color-info: #2593fc;
+
     $color-text: #fff;
     $color-grey: #d9d9d9;
     $color-black: #595959;
@@ -122,7 +136,7 @@
             }
         }
 
-        $btnColors:(danger:$color-danger,warning:$color-warning);
+        $btnColors:(danger:$color-danger,warning:$color-warning,success:$color-success,info:$color-info);
         @each $name,$btnColor in $btnColors{
             &.btn-#{$name}{
                 background-color: $btnColor;
@@ -140,6 +154,14 @@
 
         &.loading .icon {
             animation: loading 1s infinite linear;
+        }
+        &.disabled {
+            animation: none;
+            cursor: not-allowed;
+            background-color: $color-grey;
+            &:hover{
+                border: 1px solid transparent;
+            }
         }
 
 
@@ -159,7 +181,16 @@
                 box-shadow: lighten($color-warning, 30%) 0px 0px 0px 2px;
             }
         }
-
+        @keyframes success-shadow {
+            to {
+                box-shadow: lighten($color-success, 30%) 0px 0px 0px 2px;
+            }
+        }
+        @keyframes info-shadow {
+            to {
+                box-shadow: lighten($color-info, 30%) 0px 0px 0px 2px;
+            }
+        }
         > .icon {
             order: 1;
             margin-right: 4px;
@@ -177,6 +208,8 @@
             .icon {
                 order: 2;
                 margin-left: 4px;
+                margin-right: 0;
+
             }
         }
 
