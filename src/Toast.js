@@ -2,7 +2,7 @@ import Toast from "./Toast.vue";
 import Vue from 'vue'
 
 let currentToast
-const propsKey = ['type', 'position', 'closeButton', 'position', 'enableHtml','parentNode']
+const propsKey = ['type', 'position', 'closeButton', 'position', 'enableHtml','parentNode','zIndex','closeDelay']
 
 export default {
     install(vue) {
@@ -41,7 +41,9 @@ function createToast(message, options) {
     })
 
     toast.$on('close', () => {
-        currentToast = null
+        toast.$el.remove()
+        toast.$destroy()
+        // currentToast = null
     })
     toast.$mount()
     return toast

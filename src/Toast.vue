@@ -1,7 +1,6 @@
 <template>
     <transition name="fade" @after-leave="afterLeave">
-        <div class="toast" v-show="show" :class="toastClasses" ref="toast">
-
+        <div class="toast" v-show="show" :class="toastClasses" :style="toastStyle" ref="toast">
             <div class="content">
                 <div v-if="enableHtml" v-html="$slots.default[0]"></div>
                 <slot v-else></slot>
@@ -47,7 +46,7 @@
             },
             closeDelay: {
                 type: Number,
-                default: 300000
+                default: 3000
             },
             closeButton: {
                 type: Object,
@@ -63,12 +62,16 @@
                 type:Boolean,
                 default:false
             },
-            parentNode:[String,Object]
+            parentNode:[String,Object],
+            zIndex:Number
         },
         computed: {
             toastClasses() {
                 let {type, position,parentNode} = this
                 return [type, position,parentNode?'hasParent':'']
+            },
+            toastStyle(){
+                return {zIndex:this.zIndex}
             }
         },
         mounted() {
@@ -80,7 +83,6 @@
                 this.closeButton.type = 'text'
                 this.initLineHeight()
             }
-
         },
         methods: {
             initLineHeight() {
