@@ -23,6 +23,7 @@ module.exports = {
                     '/components/container',
                     '/components/button',
                     '/components/textbox',
+                    '/components/switch',
                     '/components/icon',
                     '/components/tabs',
                     '/components/collapse',

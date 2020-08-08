@@ -48,6 +48,10 @@
 </head>
 <body>
 <div id="app">
+    <div class="switch">
+        <z-switch v-model="switchValue" @change="switchChange"></z-switch>
+        {{switchValue}}
+    </div>
     <div class="collapse">
         <z-collapse :selected.sync="collapseSelected" single>
             <z-collapse-item title="一致性 Consistency" name="item1">

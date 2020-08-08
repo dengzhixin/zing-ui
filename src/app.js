@@ -19,6 +19,7 @@ import TabsBodyPane from "./TabsBodyPane";
 import Popover from "./Popover";
 import Collapse from "./Collapse";
 import CollapseItem from "./CollapseItem";
+import Switch from "./Switch";
 Vue.component('z-icon',Icon)
 Vue.component('z-button',Button)
 Vue.component('z-button-group',ButtonGroup)
@@ -38,12 +39,13 @@ Vue.component('z-tabs-pane',TabsBodyPane)
 Vue.component('z-popover',Popover)
 Vue.component('z-collapse',Collapse)
 Vue.component('z-collapse-item',CollapseItem)
-
+Vue.component('z-switch',Switch)
 Vue.use(Toast)
 
 const vue = new Vue({
     el:'#app',
     data:{
+        switchValue:false,
         loading:false,
         message:'sss',
         collapseSelected:[
@@ -51,6 +53,9 @@ const vue = new Vue({
         ]
     },
     methods:{
+        switchChange(value  ){
+            console.log(value);
+        },
         showToast(){
             this.$toast(
                 `${Math.random()*100}`,
