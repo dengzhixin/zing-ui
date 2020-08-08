@@ -142,7 +142,7 @@
         word-break: break-all;
         filter: drop-shadow(0px 1px 1px $color-grey);
         background-color: white;
-
+        font-size: 14px;
         &::before, &::after {
             content: '';
             display: block;

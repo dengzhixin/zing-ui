@@ -1,10 +1,10 @@
 <template>
     <div class="collapseItem">
-        <h4 @click="toggle">
+        <div class="title" @click="toggle">
             <span class="title">{{title}}</span>
             <div class="blank"></div>
             <Icon :name="open?'down':'right'"></Icon>
-        </h4>
+        </div>
         <transition name="fade">
             <div v-if="open" class="itemContent">
                 <slot ></slot>
@@ -59,18 +59,20 @@
     $color-grey: #d9d9d9;
 
     .collapseItem {
-        margin: 1em;
-        padding: 1em 0;
         border-bottom: 1px solid $color-grey;
-
-        > h4 {
+        > .title {
+            margin: 1em 0;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             font-size: 16px;
+            font-weight: bold;
             > .blank{
                 flex-grow: 1;
             }
+        }
+        > .itemContent{
+            padding-bottom: 1em;
         }
     }
     .fade-enter-active, .fade-leave-active {

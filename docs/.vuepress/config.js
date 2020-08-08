@@ -19,7 +19,16 @@ module.exports = {
             {
                 title: '组件',
                 children: [
-                    '/components/button'
+                    '/components/flexLayout',
+                    '/components/container',
+                    '/components/button',
+                    '/components/textbox',
+                    '/components/icon',
+                    '/components/tabs',
+                    '/components/collapse',
+                    '/components/toast',
+                    '/components/popover',
+
                 ]
             },
         ]

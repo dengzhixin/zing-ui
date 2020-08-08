@@ -1,0 +1,308 @@
+<template>
+    <templateDemos title="" :code="code">
+        <Icon name="customer-service"></Icon>
+        <Icon name="delete"></Icon>
+        <Icon name="direction-down"></Icon>
+        <Icon name="copy"></Icon>
+        <Icon name="cut"></Icon>
+        <Icon name="data-view"></Icon>
+        <Icon name="direction-down-circle"></Icon>
+        <Icon name="direction-right"></Icon>
+        <Icon name="direction-up"></Icon>
+        <Icon name="discount"></Icon>
+        <Icon name="direction-left"></Icon>
+        <Icon name="download"></Icon>
+        <Icon name="electronics"></Icon>
+        <Icon name="drag"></Icon>
+        <Icon name="elipsis"></Icon>
+        <Icon name="export"></Icon>
+        <Icon name="explain"></Icon>
+        <Icon name="edit"></Icon>
+        <Icon name="eye-close"></Icon>
+        <Icon name="email"></Icon>
+        <Icon name="error"></Icon>
+        <Icon name="favorite"></Icon>
+        <Icon name="file-common"></Icon>
+        <Icon name="file-delete"></Icon>
+        <Icon name="file-add"></Icon>
+        <Icon name="film"></Icon>
+        <Icon name="fabulous"></Icon>
+        <Icon name="file"></Icon>
+        <Icon name="folder-close"></Icon>
+        <Icon name="filter"></Icon>
+        <Icon name="good"></Icon>
+        <Icon name="hide"></Icon>
+        <Icon name="home"></Icon>
+        <Icon name="history"></Icon>
+        <Icon name="file-open"></Icon>
+        <Icon name="forward"></Icon>
+        <Icon name="image-text"></Icon>
+        <Icon name="keyboard-26"></Icon>
+        <Icon name="keyboard-9"></Icon>
+        <Icon name="link"></Icon>
+        <Icon name="layout"></Icon>
+        <Icon name="fullscreen-shrink"></Icon>
+        <Icon name="layers"></Icon>
+        <Icon name="lock"></Icon>
+        <Icon name="fullscreen-expand"></Icon>
+        <Icon name="map"></Icon>
+        <Icon name="meh"></Icon>
+        <Icon name="menu"></Icon>
+        <Icon name="loading"></Icon>
+        <Icon name="help"></Icon>
+        <Icon name="minus-circle"></Icon>
+        <Icon name="modular"></Icon>
+        <Icon name="notification"></Icon>
+        <Icon name="mic"></Icon>
+        <Icon name="more"></Icon>
+        <Icon name="pad"></Icon>
+        <Icon name="operation"></Icon>
+        <Icon name="play"></Icon>
+        <Icon name="print"></Icon>
+        <Icon name="mobile-phone"></Icon>
+        <Icon name="minus"></Icon>
+        <Icon name="navigation"></Icon>
+        <Icon name="pdf"></Icon>
+        <Icon name="move"></Icon>
+        <Icon name="refresh"></Icon>
+        <Icon name="run-up"></Icon>
+        <Icon name="picture"></Icon>
+        <Icon name="run-in"></Icon>
+        <Icon name="pin"></Icon>
+        <Icon name="save"></Icon>
+        <Icon name="search"></Icon>
+        <Icon name="share"></Icon>
+        <Icon name="scanning"></Icon>
+        <Icon name="security"></Icon>
+        <Icon name="sign-out"></Icon>
+        <Icon name="select"></Icon>
+        <Icon name="stop"></Icon>
+        <Icon name="success"></Icon>
+       <Icon name="smile"></Icon>
+        <Icon name="switch"></Icon>
+        <Icon name="setting"></Icon>
+        <Icon name="survey"></Icon>
+        <Icon name="task"></Icon>
+        <Icon name="skip"></Icon>
+        <Icon name="text"></Icon>
+        <Icon name="time"></Icon>
+        <Icon name="telephone-out"></Icon>
+        <Icon name="toggle-left"></Icon>
+        <Icon name="toggle-right"></Icon>
+        <Icon name="telephone"></Icon>
+        <Icon name="top"></Icon>
+        <Icon name="unlock"></Icon>
+        <Icon name="user"></Icon>
+        <Icon name="upload"></Icon>
+        <Icon name="work"></Icon>
+        <Icon name="training"></Icon>
+        <Icon name="warning"></Icon>
+        <Icon name="zoom-in"></Icon>
+        <Icon name="zoom-out"></Icon>
+        <Icon name="add-bold"></Icon>
+        <Icon name="arrow-left-bold"></Icon>
+        <Icon name="arrow-up-bold"></Icon>
+        <Icon name="close-bold"></Icon>
+        <Icon name="arrow-down-bold"></Icon>
+        <Icon name="minus-bold"></Icon>
+        <Icon name="arrow-right-bold"></Icon>
+        <Icon name="select-bold"></Icon>
+        <Icon name="column-4"></Icon>
+        <Icon name="add"></Icon>
+        <Icon name="add-circle"></Icon>
+        <Icon name="adjust"></Icon>
+        <Icon name="arrow-up-circle"></Icon>
+        <Icon name="arrow-right-circle"></Icon>
+        <Icon name="arrow-down"></Icon>
+        <Icon name="ashbin"></Icon>
+        <Icon name="arrow-right"></Icon>
+        <Icon name="browse"></Icon>
+        <Icon name="bottom"></Icon>
+        <Icon name="bad"></Icon>
+        <Icon name="arrow-left-circle"></Icon>
+        <Icon name="arrow-double-right"></Icon>
+        <Icon name="caps-lock"></Icon>
+        <Icon name="camera"></Icon>
+        <Icon name="chart-bar"></Icon>
+        <Icon name="attachment"></Icon>
+        <Icon name="code"></Icon>
+        <Icon name="close"></Icon>
+        <Icon name="check-item"></Icon>
+        <Icon name="calendar"></Icon>
+        <Icon name="comment"></Icon>
+        <Icon name="column-vertical"></Icon>
+        <Icon name="column-horizontal"></Icon>
+        <Icon name="complete"></Icon>
+        <Icon name="chart-pie"></Icon>
+        <Icon name="cry"></Icon>
+        <Icon name="close"></Icon>
+        <Icon name="search"></Icon>
+    </templateDemos>
+
+</template>
+
+<script>
+
+    import Icon from "../../../src/Icon";
+    import templateDemos from './template-demos'
+    export default {
+        name: 'icon-demos',
+        components: {
+            Icon,
+            templateDemos
+        },
+        data() {
+            return {
+                code:`
+<Icon name="customer-service"></Icon>
+<Icon name="delete"></Icon>
+<Icon name="direction-down"></Icon>
+<Icon name="copy"></Icon>
+<Icon name="cut"></Icon>
+<Icon name="data-view"></Icon>
+<Icon name="direction-down-circle"></Icon>
+<Icon name="direction-right"></Icon>
+<Icon name="direction-up"></Icon>
+<Icon name="discount"></Icon>
+<Icon name="direction-left"></Icon>
+<Icon name="download"></Icon>
+<Icon name="electronics"></Icon>
+<Icon name="drag"></Icon>
+<Icon name="elipsis"></Icon>
+<Icon name="export"></Icon>
+<Icon name="explain"></Icon>
+<Icon name="edit"></Icon>
+<Icon name="eye-close"></Icon>
+<Icon name="email"></Icon>
+<Icon name="error"></Icon>
+<Icon name="favorite"></Icon>
+<Icon name="file-common"></Icon>
+<Icon name="file-delete"></Icon>
+<Icon name="file-add"></Icon>
+<Icon name="film"></Icon>
+<Icon name="fabulous"></Icon>
+<Icon name="file"></Icon>
+<Icon name="folder-close"></Icon>
+<Icon name="filter"></Icon>
+<Icon name="good"></Icon>
+<Icon name="hide"></Icon>
+<Icon name="home"></Icon>
+<Icon name="history"></Icon>
+<Icon name="file-open"></Icon>
+<Icon name="forward"></Icon>
+<Icon name="image-text"></Icon>
+<Icon name="keyboard-26"></Icon>
+<Icon name="keyboard-9"></Icon>
+<Icon name="link"></Icon>
+<Icon name="layout"></Icon>
+<Icon name="fullscreen-shrink"></Icon>
+<Icon name="layers"></Icon>
+<Icon name="lock"></Icon>
+<Icon name="fullscreen-expand"></Icon>
+<Icon name="map"></Icon>
+<Icon name="meh"></Icon>
+<Icon name="menu"></Icon>
+<Icon name="loading"></Icon>
+<Icon name="help"></Icon>
+<Icon name="minus-circle"></Icon>
+<Icon name="modular"></Icon>
+<Icon name="notification"></Icon>
+<Icon name="mic"></Icon>
+<Icon name="more"></Icon>
+<Icon name="pad"></Icon>
+<Icon name="operation"></Icon>
+<Icon name="play"></Icon>
+<Icon name="print"></Icon>
+<Icon name="mobile-phone"></Icon>
+<Icon name="minus"></Icon>
+<Icon name="navigation"></Icon>
+<Icon name="pdf"></Icon>
+<Icon name="move"></Icon>
+<Icon name="refresh"></Icon>
+<Icon name="run-up"></Icon>
+<Icon name="picture"></Icon>
+<Icon name="run-in"></Icon>
+<Icon name="pin"></Icon>
+<Icon name="save"></Icon>
+<Icon name="search"></Icon>
+<Icon name="share"></Icon>
+<Icon name="scanning"></Icon>
+<Icon name="security"></Icon>
+<Icon name="sign-out"></Icon>
+<Icon name="select"></Icon>
+<Icon name="stop"></Icon>
+<Icon name="success"></Icon>
+<Icon name=" smile"></Icon>
+<Icon name="switch"></Icon>
+<Icon name="setting"></Icon>
+<Icon name="survey"></Icon>
+<Icon name="task"></Icon>
+<Icon name="skip"></Icon>
+<Icon name="text"></Icon>
+<Icon name="time"></Icon>
+<Icon name="telephone-out"></Icon>
+<Icon name="toggle-left"></Icon>
+<Icon name="toggle-right"></Icon>
+<Icon name="telephone"></Icon>
+<Icon name="top"></Icon>
+<Icon name="unlock"></Icon>
+<Icon name="user"></Icon>
+<Icon name="upload"></Icon>
+<Icon name="work"></Icon>
+<Icon name="training"></Icon>
+<Icon name="warning"></Icon>
+<Icon name="zoom-in"></Icon>
+<Icon name="zoom-out"></Icon>
+<Icon name="add-bold"></Icon>
+<Icon name="arrow-left-bold"></Icon>
+<Icon name="arrow-up-bold"></Icon>
+<Icon name="close-bold"></Icon>
+<Icon name="arrow-down-bold"></Icon>
+<Icon name="minus-bold"></Icon>
+<Icon name="arrow-right-bold"></Icon>
+<Icon name="select-bold"></Icon>
+<Icon name="column-4"></Icon>
+<Icon name="add"></Icon>
+<Icon name="add-circle"></Icon>
+<Icon name="adjust"></Icon>
+<Icon name="-up-circle"></Icon>
+<Icon name="arrow-right-circle"></Icon>
+<Icon name="arrow-down"></Icon>
+<Icon name="ashbin"></Icon>
+<Icon name="arrow-right"></Icon>
+<Icon name="browse"></Icon>
+<Icon name="bottom"></Icon>
+<Icon name="bad"></Icon>
+<Icon name="arrow-left-circle"></Icon>
+<Icon name="arrow-double-right"></Icon>
+<Icon name="caps-lock"></Icon>
+<Icon name="camera"></Icon>
+<Icon name="chart-bar"></Icon>
+<Icon name="attachment"></Icon>
+<Icon name="code"></Icon>
+<Icon name="close"></Icon>
+<Icon name="check-item"></Icon>
+<Icon name="calendar"></Icon>
+<Icon name="comment"></Icon>
+<Icon name="column-vertical"></Icon>
+<Icon name="column-horizontal"></Icon>
+<Icon name="complete"></Icon>
+<Icon name="chart-pie"></Icon>
+<Icon name="cry"></Icon>
+<Icon name="close"></Icon>
+<Icon name="search"></Icon>`
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+.icon{
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 4px;
+    &:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+</style>

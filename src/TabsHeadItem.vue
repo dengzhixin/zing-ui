@@ -47,8 +47,11 @@
     .item {
         margin-right: 2em;
         cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0.5em;
         &:hover{
-            color: $color-primary;
+            color: lighten($color-primary,20%) ;
         }
         &.disabled{
             cursor: not-allowed;
@@ -56,6 +59,10 @@
             &:hover{
                 color: $color-grey;
             }
+        }
+        &.active{
+            color: $color-primary;
+
         }
     }
 </style>

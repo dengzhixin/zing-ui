@@ -23,6 +23,7 @@
         computed: {
             rowClass() {
                 return [
+                    !this.gutter && 'wrap',
                     this.justify && `justify-${this.justify}`,
                     this.align && `align-${this.align}`,
                 ]
@@ -40,7 +41,9 @@
     .row {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        &.wrap{
+            flex-wrap: wrap;
+        }
         $justifyList: (left: flex-start, right: flex-end,
                 center: center,around:space-around,
                 between:space-between,evenly:space-evenly,

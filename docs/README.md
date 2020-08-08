@@ -1,15 +1,14 @@
 ---
 home: true
 heroText: Zing-UI
-tagline: 一个基于Vue2 + TypeScrtpt + Sass 的UI组件库
+tagline: 一个基于Vue + TypeScrtpt + Sass 的UI组件库
 actionText: 快速上手 →
 actionLink: guide/introduction
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2020-present Zing
+- title: Vue
+  details: 为Vue的过大使用者提供方便快捷的UI库，易于上手，还便于与第三方库或既有项目整合。
+- title: TypeScrtpt
+  details: TypeScript 发展至今，已经成为大型项目的标配，其提供的静态类型系统，大大增强了代码的可读性以及可维护性。
+- title: Sass
+  details: Sass 是一种 CSS 的预编译语言，能够帮助复杂的样式表更有条理， 并且易于在项目内部或跨项目共享设计。
 ---

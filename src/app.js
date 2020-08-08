@@ -7,9 +7,9 @@ import Col from "./Col";
 import Row from './Row'
 import Layout from "./Layout";
 import Header from "./Header";
-import Sider from "./Sider";
+import Sider from "./Aside";
 import Footer from "./Footer";
-import Content from "./Content";
+import Content from "./Main";
 import Toast from "./Toast.js";
 import Tabs from "./Tabs";
 import TabsHead from "./TabsHead";
