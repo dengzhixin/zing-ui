@@ -6,7 +6,7 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '文档', link: '/guide/introduction' },
-            { text: '建议', link: 'https://github.com/dengzhixin/zing-ui/tree/vue2' },
+            { text: 'GitHub', link: 'https://github.com/dengzhixin/zing-ui/tree/vue2' },
         ],
         sidebar: [
             {
