@@ -1,5 +1,5 @@
 ---
-title:介绍
+title: 介绍
 ---
 # 基本信息
 Zing-UI 是一个基于Vue2 + TypeScrtpt + Sass 的UI组件库，涵盖了Button、Icon、TextBox、Tabs、Collapse、Popover等组件
