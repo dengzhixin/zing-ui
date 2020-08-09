@@ -13,7 +13,6 @@ module.exports = {
                 title: '入门',
                 children: [
                     '/guide/introduction',
-                    '/guide/install',
                     '/guide/quickStart',
                 ]
             },

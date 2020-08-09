@@ -19,6 +19,7 @@ import Popover from "./src/Popover";
 import Collapse from "./src/Collapse";
 import CollapseItem from "./src/CollapseItem";
 import Switch from "./src/Switch";
-export default {Button,Icon,ButtonGroup,TextBox,Col,Row,Layout,Header,Sider
+
+export {Button,Icon,ButtonGroup,TextBox,Col,Row,Layout,Header,Sider
     ,Footer,Main,Toast,Tabs,TabsHead,TabsHeadItem,TabsBodyPane,TabsBody,Popover
     ,Collapse,CollapseItem,Switch}
