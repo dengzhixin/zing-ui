@@ -6,7 +6,7 @@
             <div class="component-wrapper-demo" ref="componentWrapper">
                 <slot></slot>
             </div>
-            <div class="code-content" v-show="showCode" v-highlight>
+            <div class="code-content" v-show="showCode && codeStr" v-highlight>
                 <div class="code-content-height">
                     <pre><code class="vue">{{codeStr}}</code></pre>
                 </div>
