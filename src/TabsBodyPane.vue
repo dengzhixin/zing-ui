@@ -26,5 +26,7 @@
     }
 </script>
 <style lang="scss">
-
+.pane{
+    padding-top: 0.5em;
+}
 </style>

@@ -50,6 +50,7 @@
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 0.5em;
+        padding: 0 1em;
         &:hover{
             color: lighten($color-primary,20%) ;
         }

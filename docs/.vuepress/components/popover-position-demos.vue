@@ -1,16 +1,29 @@
 <template>
-    <templateDemos title="基本用法" :code="code">
+    <templateDemos title="位置" :code="code">
+
+        <Popover trigger="click"  position="top">
+            <div slot="content">
+                这是一段内容
+            </div>
+            <Button>top</Button>
+        </Popover>
         <Popover trigger="click"  position="bottom">
             <div slot="content">
                 这是一段内容
             </div>
-            <Button>点击激活</Button>
+            <Button>bottom</Button>
         </Popover>
-        <Popover trigger="hover"  position="bottom">
+        <Popover trigger="click"  position="left">
             <div slot="content">
                 这是一段内容
             </div>
-            <Button>hover激活</Button>
+            <Button>left</Button>
+        </Popover>
+        <Popover trigger="click"  position="right">
+            <div slot="content">
+                这是一段内容
+            </div>
+            <Button>right</Button>
         </Popover>
     </templateDemos>
 

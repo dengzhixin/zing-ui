@@ -24,11 +24,12 @@ module.exports = {
                     '/components/button',
                     '/components/textbox',
                     '/components/switch',
-                    '/components/icon',
                     '/components/tabs',
                     '/components/collapse',
                     '/components/toast',
                     '/components/popover',
+                    '/components/icon',
+
 
                 ]
             },

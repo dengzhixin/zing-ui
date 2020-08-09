@@ -19,6 +19,14 @@
             <Aside width="200px">Aside</Aside>
             <Main>Main</Main>
         </Layout>
+        <h5>左中右布局</h5>
+        <Layout>
+            <Aside width="100px">Aside</Aside>
+            <Layout>
+                <Main>Main</Main>
+                <Aside width="100px">Aside</Aside>
+            </Layout>
+        </Layout>
 
         <h5>组合布局1</h5>
         <Layout>

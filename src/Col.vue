@@ -50,6 +50,11 @@
             colClass() {
                 let {span, offset, justify, align, ipad, narrowPc, pc, widePc} = this
                 let x = (obj,device='')=>{
+                    if(typeof obj === "number"){
+                        obj={
+                            span:obj
+                        }
+                    }
                     let arr = []
                     if(!obj){return arr
                     }

@@ -2,16 +2,16 @@
     <templateDemos title="基本用法" :code="code">
         <Tabs selected="item1">
             <TabsHead>
-                <TabsHeadItem name="item1">Tab1</TabsHeadItem>
-                <TabsHeadItem name="item2" >Tab2</TabsHeadItem>
-                <TabsHeadItem name="item3">Tab3</TabsHeadItem>
-                <TabsHeadItem name="item4">Tab4</TabsHeadItem>
+                <TabsHeadItem name="item1"> Tab1</TabsHeadItem>
+                <TabsHeadItem name="item2" > Tab2</TabsHeadItem>
+                <TabsHeadItem name="item3"> Tab3</TabsHeadItem>
+                <TabsHeadItem name="item4"> Tab4</TabsHeadItem>
             </TabsHead>
             <TabsBody>
-                <TabsBodyPane name="item1">Tab1</TabsBodyPane>
-                <TabsBodyPane name="item2">Tab2</TabsBodyPane>
-                <TabsBodyPane name="item3">Tab3</TabsBodyPane>
-                <TabsBodyPane name="item4">Tab4</TabsBodyPane>
+                <TabsBodyPane name="item1"> Tab1</TabsBodyPane>
+                <TabsBodyPane name="item2"> Tab2</TabsBodyPane>
+                <TabsBodyPane name="item3"> Tab3</TabsBodyPane>
+                <TabsBodyPane name="item4"> Tab4</TabsBodyPane>
             </TabsBody>
         </Tabs>
     </templateDemos>
@@ -45,16 +45,16 @@
                 code: `
 <Tabs selected="item1">
     <TabsHead>
-        <TabsHeadItem name="item1">Tab1</TabsHeadItem>
-        <TabsHeadItem name="item2" >Tab2</TabsHeadItem>
-        <TabsHeadItem name="item3">Tab3</TabsHeadItem>
-        <TabsHeadItem name="item4">Tab4</TabsHeadItem>
+        <TabsHeadItem name="item1"> Tab1</TabsHeadItem>
+        <TabsHeadItem name="item2" > Tab2</TabsHeadItem>
+        <TabsHeadItem name="item3"> Tab3</TabsHeadItem>
+        <TabsHeadItem name="item4"> Tab4</TabsHeadItem>
     </TabsHead>
     <TabsBody>
-        <TabsBodyPane name="item1">Tab1</TabsBodyPane>
-        <TabsBodyPane name="item2">Tab2</TabsBodyPane>
-        <TabsBodyPane name="item3">Tab3</TabsBodyPane>
-        <TabsBodyPane name="item4">Tab4</TabsBodyPane>
+        <TabsBodyPane name="item1"> Tab1</TabsBodyPane>
+        <TabsBodyPane name="item2"> Tab2</TabsBodyPane>
+        <TabsBodyPane name="item3"> Tab3</TabsBodyPane>
+        <TabsBodyPane name="item4"> Tab4</TabsBodyPane>
     </TabsBody>
 </Tabs>
 `

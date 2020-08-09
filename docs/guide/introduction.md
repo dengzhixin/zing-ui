@@ -13,4 +13,4 @@ Zing-UI 是一个基于Vue2 + TypeScrtpt + Sass 的UI组件库，涵盖了Button
 * [https://dengzhi.xin/](https://dengzhi.xin/)
 * [https://github.com/dengzhixin](https://github.com/dengzhixin)
 # 注意事项
-Zing-UI是个人学习过程中造出来的UI库，如果你在使用过程中发现问题，非常感谢你提出宝贵意见。PS：暂不建议在生产项目中使用
+Zing-UI是个人学习过程中造出来的UI库，如果你在使用过程中发现问题，非常感谢你提出宝贵意见。PS：目前项目属于开发中，暂不建议在生产项目中使用
