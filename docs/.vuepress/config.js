@@ -7,6 +7,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '文档', link: '/guide/introduction' },
             { text: 'GitHub', link: 'https://github.com/dengzhixin/zing-ui/tree/vue2' },
+            { text: 'Gitee', link: 'https://gitee.com/dengzhixin/zing-ui' },
         ],
         sidebar: [
             {
