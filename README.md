@@ -4,7 +4,7 @@
 [GitHub仓库](https://github.com/dengzhixin/zing-ui/tree/vue2)
 [GitHub文档](https://dengzhixin.github.io/zing-ui/guide/introduction.html)
 [Gitee仓库](https://gitee.com/dengzhixin/zing-ui)
-[Gitee文档](http://dengzhixin.gitee.io/zing-ui/guide/quickStart.html)
+[Gitee文档](http://dengzhixin.gitee.io/zing-ui/guide/introduction.html)
 
 # 基本信息
 Zing-UI 是一个基于Vue2 + TypeScrtpt + Sass 的UI组件库，涵盖了Button、Icon、TextBox、Tabs、Collapse、Popover等组件
