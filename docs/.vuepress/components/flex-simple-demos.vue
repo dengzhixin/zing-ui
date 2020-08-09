@@ -1,5 +1,5 @@
 <template>
-    <templateDemos title="响应式布局" :code="code">
+    <templateDemos title="基本用法" :code="code">
         <div class="row-bg">
             <Row>
                 <Col :span="24">
