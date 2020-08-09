@@ -1,13 +1,17 @@
 # ZingUi
+
 <a target="_black" href="https://travis-ci.org/github/dengzhixin/zing-ui"><img src="https://api.travis-ci.org/dengzhixin/zing-ui.svg?branch=vue2"/></a>
+<a  target="_black" href="https://github.com/dengzhixin/zing-ui/tree/vue2"><img src="https://img.shields.io/npm/l/zing-ui"></a>
+<a  target="_black" href="https://www.npmjs.com/package/zing-ui" rel="nofollow"><img src="https://img.shields.io/npm/v/zing-ui?style=flat" alt="Version" data-canonical-src="https://img.shields.io/npm/v/vue.svg?sanitize=true" style="max-width:100%;"></a>
+
+# 基本信息
+Zing-UI 是一个基于Vue2 + TypeScrtpt + Sass 的UI组件库，涵盖了Button、Icon、TextBox、Tabs、Collapse、Popover等组件。
 
 [GitHub仓库](https://github.com/dengzhixin/zing-ui/tree/vue2)
 [GitHub文档](https://dengzhixin.github.io/zing-ui/guide/introduction.html)
 [Gitee仓库](https://gitee.com/dengzhixin/zing-ui)
 [Gitee文档](http://dengzhixin.gitee.io/zing-ui/guide/introduction.html)
 
-# 基本信息
-Zing-UI 是一个基于Vue2 + TypeScrtpt + Sass 的UI组件库，涵盖了Button、Icon、TextBox、Tabs、Collapse、Popover等组件
 # 开发目的
 有人总说不要重复造轮子, 因为凭借自己的力量几乎不可能造出一个比业界共用的轮子还好的轮子, 造再多也是白费力。
 这的确有点道理，但我的目的只是为了学习与提高，在这个过程中遇到的问题学习的东西都是很重要的。
