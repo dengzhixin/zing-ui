@@ -28,7 +28,7 @@
                 this.$toast(`默认信息`, {closeButton: {type: 'icon'}})
             },
             showToast2() {
-                this.$toast(`自定义文字`, {closeButton: {text: '关闭'}})
+                this.$toast(`这是一段很长自定义文字，你猜有多长？你数一数大概有几个字，我猜你肯定没有数，我来告诉你吧，这里有100个字，不信？那你自己去数数吧，数完再来告诉我，我来改。`, {closeButton: {text: '关闭'}})
             },
             showToast3() {
                 this.$toast(`携带关闭回调函数`, {
